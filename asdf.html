@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Themes</title>
+           <!-- Required meta tags -->
+           <meta charset="utf-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       
+           <!-- Bootstrap CSS -->
+           <link rel="stylesheet" href="css/bootstrap.min.css" >
+           <link rel="stylesheet" href="css/font-awesome.min.css" >
+           <link rel="stylesheet" href="css/custom.css" >
+           
+           <!--Popular Packages Css Start-->
+           <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+           <link rel="stylesheet" type="text/css" href="css/07bc241768c969f6b6a27a7bf0dfb490.css">
+       
+            <!--Popular Packages Css End-->
+            <link rel="shortcut icon" href="images/favico.png"/> 
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    function readURL(input) {
+           if (input.files && input.files[0]) {
+               var reader = new FileReader();
+
+               reader.onload = function (e) {
+                   $('.ibox')
+                       .attr('src', e.target.result);
+               };
+
+               reader.readAsDataURL(input.files[0]);
+
+           }
+       }
+</script>
+    </head>
+    <body>
+       <div class="shoer">
+           <form>
+            <div class="idiv">
+                <img class="ibox" src="#" alt="" ><br>
+            </div>
+             <input class="ibutton" name="imag" type='file' onchange="readURL(this);"/>
+           </form>
+       </div>
+    </body>
+  
+</html>

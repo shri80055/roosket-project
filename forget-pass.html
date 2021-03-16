@@ -1,0 +1,633 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+      
+      
+    
+
+<div id="fb-root"></div>
+<script id="allauth-facebook-settings" type="application/json">
+{"appId": "172922344576918", "version": "v2.4", "sdkUrl": "//connect.facebook.net/kr_KR/sdk.js", "initParams": {"appId": "172922344576918", "version": "v2.4"}, "loginOptions": {"auth_type": "reauthenticate", "scope": "email,public_profile,user_friends", "auth_nonce": "6erFO3uG6lTnCGbjVOGlIo49WxrClsxJ"}, "loginByTokenUrl": "https://roosket.com/social_auth/facebook/login/token/", "cancelUrl": "https://roosket.com/social_auth/social/login/cancelled/", "logoutUrl": "https://roosket.com/social_auth/logout/", "loginUrl": "https://roosket.com/social_auth/facebook/login/", "errorUrl": "https://roosket.com/social_auth/social/login/error/", "csrfToken": "WuK6PRlqNpYFQDdLPqtF44kP4PIqJO3qRjChXdpsgQUCD3jaPwGdFilCZO4OjIfo"}
+</script>
+<script type="text/javascript" src="/static/facebook/js/fbconnect.js"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/font-awesome.min.css" >
+    <link rel="stylesheet" href="css/custom.css" >
+
+    <!--Popular Packages Css Start-->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="css/07bc241768c969f6b6a27a7bf0dfb490.css">
+
+     <!--Popular Packages Css End-->
+     <link rel="shortcut icon" href="images/favico.png"/>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css" rel="stylesheet"
+          media="screen">
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+    <title>Roosket</title>
+  </head>
+  <style>
+
+
+
+    /* .singup_login
+    {
+      margin-left: 20px;
+    } */
+
+    .navbar .sign-up-btn {
+	min-width: 110px;
+	max-height: 36px;
+}
+.navbar .dropdown-menu {
+	color: #999;
+	font-weight: normal;
+	border-radius: 1px;
+	border-color: #e5e5e5;
+	box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.navbar a, .navbar a:active {
+	color: #888;
+	padding: 8px 20px;
+	background: transparent;
+	line-height: normal;
+}
+.navbar .navbar-form {
+	border: none;
+}
+.navbar .action-form {
+	width: 400px;
+	padding: 20px;
+	left: auto;
+	right: 0;
+	font-size: 14px;
+}
+.navbar .action-form a {
+	color: #33cabb;
+	padding: 0 !important;
+	font-size: 14px;
+}
+.navbar .action-form .hint-text {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+.navbar .btn-primary, .navbar .btn-primary:active {
+	color: #fff;
+	background: #33cabb !important;
+	border: none;
+}
+.navbar .btn-primary:hover, .navbar .btn-primary:focus {
+	color: #fff;
+	background: #31bfb1 !important;
+}
+.navbar .social-btn .btn, .navbar .social-btn .btn:hover {
+	color: #fff;
+	margin: 0;
+	padding: 0 !important;
+	font-size: 13px;
+	border: none;
+	transition: all 0.4s;
+	text-align: center;
+	line-height: 34px;
+	width: 47%;
+	text-decoration: none;
+}
+.navbar .social-btn .facebook-btn {
+	background: #507cc0;
+}
+.navbar .social-btn .facebook-btn:hover {
+	background: #4676bd;
+}
+.navbar .social-btn .twitter-btn {
+	background:#E3313C;
+}
+.navbar .social-btn .twitter-btn:hover {
+	background: #4ec7ef;
+}
+.navbar .social-btn .btn i {
+	margin-right: 5px;
+	font-size: 16px;
+	position: relative;
+	top: 2px;
+}
+.or-seperator {
+	margin-top: 32px;
+	text-align: center;
+	border-top: 1px solid #e0e0e0;
+}
+.or-seperator b {
+	color: #666;
+	padding: 0 8px;
+	width: 30px;
+	height: 30px;
+	font-size: 13px;
+	text-align: center;
+	line-height: 26px;
+	background: #fff;
+	display: inline-block;
+	border: 1px solid #e0e0e0;
+	border-radius: 50%;
+	position: relative;
+	top: -15px;
+	z-index: 1;
+}
+.navbar .action-buttons .dropdown-toggle::after {
+	display: none;
+}
+.form-check-label input {
+	position: relative;
+	top: 1px;
+}
+.d_user-profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#d_drop_profile-icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0;
+    vertical-align: 0;
+    content: "";
+    border-top: 0 solid !important;
+    border-right: 0 solid transparent;
+    border-bottom: 0 !important;
+    border-left: 0 solid transparent;
+}
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+
+#d_drop, #d_not_drop {
+    position: absolute;
+    left: unset;
+    right: 20px;
+    padding: 0;
+    margin: 0;
+    width: 400px;
+    border-radius: 0;
+    opacity: 1;
+    border: 0;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,.15);
+}
+
+.d_drop_profile-icon {
+    padding: 15px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.d_main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d_a{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    margin-top: -12px;
+}
+
+
+
+@media (min-width: 1200px){
+	.form-inline .input-group {
+		width: 300px;
+		margin-left: 30px;
+	}
+}
+@media (max-width: 768px){
+	.navbar .dropdown-menu.action-form {
+		width: 100%;
+		padding: 10px 15px;
+		background: transparent;
+		border: none;
+	}
+	.navbar .form-inline {
+		display: block;
+	}
+	.navbar .input-group {
+		width: 100%;
+	}
+}
+</style>
+
+
+
+
+
+<script>
+  var login ="";
+  if (login == "") {
+  }
+  else
+  {
+    window.onload = () => document.querySelector('[data-target="#exampleModal"]').click();
+  }
+  </script>
+
+<script>
+  var signup ="";
+  if (signup == "Email is already taken") {
+    window.onload = () => document.querySelector('[data-target="#this_is_signup"]').click();
+  }
+  else
+  {
+
+  }
+  </script>
+<script>
+  function signupbutton() {
+    window.onload = () => document.querySelector('[data-target="#exampleModal"]').click();
+    window.onload = () => document.querySelector('[data-target="#this_is_signup"]').click();
+  }
+  </script>
+
+<script>
+  function this_if_for_signup_click(){
+
+    document.getElementById('this_is_signup_button_click').click();
+
+  }
+  </script>
+
+<script>
+// Prevent dropdown menu from closing when click inside the form
+$(document).on("click", ".action-buttons .dropdown-menu", function(e){
+	e.stopPropagation();
+});
+</script>
+
+  <body>
+  <div id="thetop" class="thetop"></div>
+  <div class="backtotop" style="">
+        <a href="#thetop" class="scroll">
+            <img src="images/scroll_to_top.png">
+        </a>
+    </div>
+
+  <!--Nav Start-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  	<div class="container">
+      <a class="navbar-brand" href="/"><img class="logo" alt="Roosket" title="Roosket" src="images/logo_white.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sidemenu-toggler"></span>
+        <span class="sidemenu-toggler"></span>
+        <span class="sidemenu-toggler"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto" >
+          <li class="nav-item active"  >
+            <a class="nav-link" href="/about_us_app/"> About Us <span class="sr-only">(current)</span></a>
+          </li>
+          
+          <li class="nav-item"><a class="nav-link" href="/place/"><i class="fa fa-map-markerr" aria-hidden="true"></i>&nbsp; Places</a></li>
+          
+
+          
+          <li class="nav-item"><a class="nav-link" href="/activity/"><i class="fa fa-childd" aria-hidden="true"></i>&nbsp; Activities</a></li>
+          
+
+          
+          <li class="nav-item"><a class="nav-link" href="/themes/"><i class="fa fa-columnss" aria-hidden="true"></i> Themes</a></li>
+          
+
+
+          
+          <li class="nav-item"><a class="nav-link" href="/packages/"><i class="fa fa-th-largee" aria-hidden="true"></i>&nbsp; Packages</a></li>
+          
+
+          
+          <li class="nav-item"><a class="nav-link" href="/gallery/"><i class="fa fa-picture-oo" aria-hidden="true"></i>&nbsp; Gallery</a></li>
+          
+
+          
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-columnss" aria-hidden="true"></i> Inclusions</a></li>
+          
+            
+            <!-- ---------------------------------------------------------------------------------------------------------------- -->
+
+                <div class="singup_login">
+            <div class="navbar-nav ml-auto action-buttons">
+              <div class="nav-item dropdown">
+                <a href="#" data-target="#exampleModal" data-toggle="dropdown" id="login_button_id_onclick_open_popup"  class="nav-link dropdown-toggle mr-4" >&nbsp;&nbsp;&nbsp;Login</a>
+                        <div class="dropdown-menu action-form login_box">
+                  <form action="/api/login" method="post">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="Yu7QeLIq3jnn5KG0Rj6XbzcfjW4IKpBtTjZ1m7MswKjkSaMpRpjvMNd2eVq6kjNr">
+                    <p class="hint-text">Sign in with your social media account</p>
+                    <div class="form-group social-btn clearfix">
+                      <a href="javascript:allauth.facebook.login%28%27%27%2C%20%27authenticate%27%2C%20%27login%27%2C%20%27%27%29" class="btn btn-secondary facebook-btn float-left"><i class="fa fa-facebook"></i> Facebook</a>
+                      <a href="#" class="btn btn-danger twitter-btn float-right"><i class="fa fa-google"></i> Google</a>
+                    </div>
+                    <div class="or-seperator"><b>or</b></div>
+                    <p style="color: red;"></p>
+                    <div class="form-group">
+                      <input type="email" class="form-control" name="email" placeholder="Email" oninvalid="this.setCustomValidity('Enter Email')"
+                      oninput="this.setCustomValidity('')" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" name="password_first" placeholder="Password" oninvalid="this.setCustomValidity('Enter Password')"
+                      oninput="this.setCustomValidity('')" required="required">
+                    </div>
+                    <input type="submit" style="background-color:#2a2736; color: white;" class="btn btn- btn-block" name="login" value="LOGIN">
+
+
+                    <div class="text-center mt-2">
+
+                      <a href="/password_reset/recover/"><p style="color: blue;">Forgot Your password ?</p></a>
+                    </div>
+                    <!-- <a href="#link" data-target="#this_button_if_for_open"  onclick="this_if_for_signup_click()" class="btn btn-info" role="button">Signup</a> -->
+                    <button type="button" onclick="this_if_for_signup_click()" style="background-color: blue;" class="btn btn-primary">SIGN UP</button>
+                  </form>
+
+                        </div>
+              </div>
+              <div class="nav-item dropdown">
+
+                        <div  class="dropdown-menu action-form">
+                          <a href="#" data-target="#this_is_signup" id="this_is_signup_button_click" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4"></a>
+                  <form action="/signup/"   method="post" >
+                    <input type="hidden" name="csrfmiddlewaretoken" value="Yu7QeLIq3jnn5KG0Rj6XbzcfjW4IKpBtTjZ1m7MswKjkSaMpRpjvMNd2eVq6kjNr">
+                    <br>
+
+                    <!-- <span style="margin-left: 20px;">  <button type="button" class="btn btn-primary">LOGIN</button> </span> -->
+
+
+                    <p class="hint-text" style="color: blue; font-size: 20px;">
+
+
+                      Sign Up</p>
+                    <p style="color: red;"></p>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="first_name" placeholder="First Name" id="signup_first_name" oninvalid="setCustomValidity(' ')" onkeypress="return /[a-z]/i.test(event.key)">
+                      <span id="empty_first_name_message"></span>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required" oninvalid="this.setCustomValidity('Enter Last Name')"
+                      oninput="this.setCustomValidity('')" onkeypress="return /[a-z]/i.test(event.key)">
+                    </div>
+                    <div class="form-group">
+                      <input type="email" class="form-control" name="email" placeholder="Email" oninvalid="this.setCustomValidity('Enter Email')"
+                      oninput="this.setCustomValidity('')" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control"  name="password_first" placeholder="Password" minlength="8" oninvalid="this.setCustomValidity('Enter Password')"
+                      oninput="this.setCustomValidity('')" id="password" required="required">
+                    </div>
+                    <div class="form-group">
+
+                      <input type="password" class="form-control" name="password_second" placeholder="Confirm Password" minlength="8" oninvalid="this.setCustomValidity('Enter Confirm Password')"
+                      oninput="this.setCustomValidity('')" id="confirm_password" required>
+                    </div>
+
+
+                    <div class="form-group">
+                      <div class="custom-control custom-checkbox">
+                         <input style="display: block!important; float: left;" type="checkbox" class="custom-control-input" id="customCheck1" required>
+                          <label style="word-wrap: break-word; line-height: 16px; float: left; " class="custom-control-label" for="customCheck1"><span style="color:black;">I Agree to the Roosket </span><a href="#" style="color: blue;">Terms & Conditions</a></label>
+
+                      </div>
+                    </div>
+
+                    <input type="submit" style="background-color:#2a2736; color: white;" class="btn btn-primar btn-block" onclick="sigup_requeired_validation_form()" name="signup" value="SIGN UP">
+
+
+                  </form>
+                  <br>
+                  <!-- <input type="button"  style="background-color:#3fb1ce; color: white;" class="btn btn-primar btn-block" id="signup_page_login_button_click" onclick="signup_login_form_open()" name="login" value="LOGIN"> -->
+                </div>
+              </div></div>
+
+
+
+              <script>
+                function sigup_requeired_validation_form(){
+
+                 var first_name = document.getElementById("signup_first_name").value;
+                 if(first_name == ""){
+
+                    var foo = document.getElementById('foo');
+                    foo.setCustomValidity(' An error occurred');
+
+                 }
+                }
+              </script>
+
+
+              <script>
+                var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+</script>
+
+
+
+                <!-- ================================================================================================================= -->
+
+
+
+
+
+
+                
+
+        </ul>
+
+
+
+      </div>
+      </div>
+    </nav>
+
+<div class="data_recover" style="background-color:#f4f6f6;">
+<div class="" >
+    <div class="jumbotron" style="background-color:#f4f6f6;">
+            <center>
+                <div class="row" >
+                    <div  class="col-md-12 col-xs-12 ">
+                       <div class="page-header" >
+                           <div class="alert alert-warning" role="alert"  style="background-color:#fff; border-color: #cce5fa;">
+                             <p class="forget"><a href="#" class="alert-link " style="color: #008FC8;" >Enter your registered Email</a></p>
+                          </div>
+                       </div>
+                 <form class="sk-1" method="post" action="#"  role="form">
+                 <input type="hidden" name="csrfmiddlewaretoken" value="Yu7QeLIq3jnn5KG0Rj6XbzcfjW4IKpBtTjZ1m7MswKjkSaMpRpjvMNd2eVq6kjNr">
+                 <input type="hidden" name="csrfmiddlewaretoken" value="Yu7QeLIq3jnn5KG0Rj6XbzcfjW4IKpBtTjZ1m7MswKjkSaMpRpjvMNd2eVq6kjNr">
+                 <p> <input type="email" name="username_or_email" class="form-control" required id="id_username_or_email"></p><div id="error2" style="color:red"></div>
+                <center>
+                    
+                  <button  class="btn btn-primary" id="btn" type="submit" value="Recover password">Recover password</button>
+              
+                  <!-- <input class="btn recover  btn-block "  id="btn" type="submit" value="Recover password"  >   -->
+               </center>   
+                </form>
+                  </div>
+              
+              
+              </div>
+            </center>
+    </div></div>
+ <br/> <br/> </div>
+
+
+
+<!-- ============================================= -->
+
+ <!--footer start-->
+ <section class="footerbg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <a class="navbar-brand" href=""><img class="logo" alt="Roosket" title="Roosket" src="images/logo_white.png"></a>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+            </div><!--col-md-4 end-->
+            <div class="col-md-6 col-lg-3">
+                <h2>navigation</h2>
+                <ul class="topfooter">
+                  <li><a href="/about_us_app/"><i class="fa fa-chevron-right" aria-hidden="true"></i> About Us</a></li>
+                    <li><a href="/place/"><i class="fa fa-chevron-right" aria-hidden="true"></i> Places</a></li>
+                    <li><a href="/activity/"><i class="fa fa-chevron-right" aria-hidden="true"></i> Activities</a></li>
+                    <li><a href="/themes/"><i class="fa fa-chevron-right" aria-hidden="true"></i> Themes</a></li>
+                    <li><a href="/packages/"><i class="fa fa-chevron-right" aria-hidden="true"></i> Packages</a></li>
+
+                    <li><a href="/gallery/"><i class="fa fa-chevron-right" aria-hidden="true"></i> Gallery</a></li>
+                    <li><a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Inclusions</a></li>
+                </ul>
+            </div><!--col-md-4 end-->
+            <div class="col-md-6 col-lg-3">
+                <h2>social media</h2>
+                <div class="row smalimg">
+                    <div class="col-md-4">
+                        <img class="img-fluid" src="images/a1.png">
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-fluid" src="images/a2.png">
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-fluid"src="images/a3.png">
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-fluid" src="images/a4.png">
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-fluid" src="images/a1.png">
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-fluid" src="images/a2.png">
+                    </div>
+                </div>
+                <div class="soci">
+                    <i class="fa fa-facebook-f" aria-hidden="true"></i>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </div>
+            </div><!--col-md-4 end-->
+            <div class="col-md-6 col-lg-3">
+                <h2>contact us</h2>
+                <ul>
+                    <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> 2/78 H, Sainiketan Colony, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Kalas Road, Pune - 411015</a></li>
+                    <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 9061011166</a></li>
+                    <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> roosket@gmail.com</a></li>
+                    <li><a href="#"><i class="fa fa-globe" aria-hidden="true"></i> www.roosket.com</a></li>
+                </ul>
+            </div><!--col-md-4 end-->
+
+        </div><!--row end-->
+        <hr class="mt-6">
+        <div class="row">
+            <div class="col-md-12 col-lg-4">
+                <span class="white copy">&copy;
+
+                  <script type="text/javascript">
+                  document.write(new Date().getFullYear());
+                </script>
+
+                All Rights Reserved Roosket</span>
+            </div><!--col-md-4 end-->
+            <div class="col-md-12 col-lg-8">
+                <div class="footers">
+                    <ul>
+                        <li><a href="/about_us_app/" class="active">privacy policy</a></li>
+                        <li><a href="/about_us_app/">about us</a></li>
+                        <li><a href="/contact_us/">support</a></li>
+<!--                        <li><a href="#">faq</a></li>-->
+                        <li><a href="/blog_list/">blog</a></li>
+                    </ul>
+                </div>
+            </div><!--col-md-8 end-->
+
+        </div><!--row end-->
+    </div><!--container end-->
+</section>
+<!--footer end-->
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.5.1.slim.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<!--Popular Package JS Start-->
+<!-- fraimwork - jquery include -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <!-- carousel jquery include -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- calendar jquery include -->
+    <script src="js/atc.min.js"></script>
+    <!-- others jquery include -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jarallax.min.js"></script>
+    <!-- custom jquery include -->
+    <script src="js/custom.js"></script>
+    <script type="text/javascript" src="js/intlTelInput.min.js"></script>
+  
+  
+<!--Popular Package JS End-->
+
+</body>
+</html>

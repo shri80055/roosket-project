@@ -1,0 +1,3479 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+
+<div id="fb-root"></div>
+<script id="allauth-facebook-settings" type="application/json">
+{"appId": "172922344576918", "version": "v2.4", "sdkUrl": "//connect.facebook.net/kr_KR/sdk.js", "initParams": {"appId": "172922344576918", "version": "v2.4"}, "loginOptions": {"auth_type": "reauthenticate", "scope": "email,public_profile,user_friends", "auth_nonce": "jZ7TZWqrSaA8ravTVXZSxs9V3J8o6bl0"}, "loginByTokenUrl": "https://roosket.com/social_auth/facebook/login/token/", "cancelUrl": "https://roosket.com/social_auth/social/login/cancelled/", "logoutUrl": "https://roosket.com/social_auth/logout/", "loginUrl": "https://roosket.com/social_auth/facebook/login/", "errorUrl": "https://roosket.com/social_auth/social/login/error/", "csrfToken": "FGf2zOZdUKrN63Gmb2PHfcisDhNfa5vGIh0BsSA667V8jvGtDc50niJ2gY5IMM1X"}
+</script>
+<script type="text/javascript" src="/static/facebook/js/fbconnect.js"></script>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href=" css/bootstrap.min.css" >
+<link rel="stylesheet" href=" css/font-awesome.min.css" >
+<link rel="stylesheet" href=" css/custom.css" >
+<!--Popular Packages Css Start-->
+<link rel="stylesheet" type="text/css" href=" css/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href=" css/07bc241768c969f6b6a27a7bf0dfb490.css">
+
+<!--Popular Packages Css End-->
+<link rel="shortcut icon" href=" images/favico.png"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css" rel="stylesheet"
+media="screen">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js" type="text/javascript"></script>
+<link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+<title>Roosket</title>
+</head>
+<style>
+
+.modal.show .modal-dialog {
+margin-left: 255px;
+
+}
+.picture-container {
+position: relative;
+cursor: pointer;
+margin-top: 25px;
+}
+.picture input[type="file"] {
+cursor: pointer;
+display: block;
+left: 0;
+opacity: 0 !important;
+position: relative;
+top: -155px;
+height: 150px;
+width: 150px;
+}
+.picture-src {
+width: 100%;
+}
+.d6_photo-delete {
+position: relative;
+top: -315px;
+left: 135px;
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background: #d4d4d4;
+}
+.d6_photo-delete i {
+text-align: center;
+line-height: 30px;
+padding-left: 9px;
+color: #ff0000;
+cursor: pointer;
+}
+.picture{
+float: left;
+margin-right: 20px;
+}
+
+/* .singup_login
+{
+margin-left: 20px;
+} */
+.navbar .sign-up-btn {
+min-width: 110px;
+max-height: 36px;
+}
+.navbar .dropdown-menu {
+color: #999;
+font-weight: normal;
+border-radius: 1px;
+border-color: #e5e5e5;
+box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.navbar a, .navbar a:active {
+color: #888;
+padding: 8px 20px;
+background: transparent;
+line-height: normal;
+}
+.navbar .navbar-form {
+border: none;
+}
+.navbar .action-form {
+width: 400px;
+padding: 20px;
+left: auto;
+right: 0;
+font-size: 14px;
+}
+.navbar .action-form a {
+color: #33cabb;
+padding: 0 !important;
+font-size: 14px;
+}
+.navbar .action-form .hint-text {
+text-align: center;
+margin-bottom: 15px;
+font-size: 13px;
+}
+.navbar .btn-primary, .navbar .btn-primary:active {
+color: #fff;
+background: #33cabb !important;
+border: none;
+}
+.navbar .btn-primary:hover, .navbar .btn-primary:focus {
+color: #fff;
+background: #31bfb1 !important;
+}
+.navbar .social-btn .btn, .navbar .social-btn .btn:hover {
+color: #fff;
+margin: 0;
+padding: 0 !important;
+font-size: 13px;
+border: none;
+transition: all 0.4s;
+text-align: center;
+line-height: 34px;
+width: 47%;
+text-decoration: none;
+}
+.navbar .social-btn .facebook-btn {
+background: #507cc0;
+}
+.navbar .social-btn .facebook-btn:hover {
+background: #4676bd;
+}
+.navbar .social-btn .twitter-btn {
+background:#E3313C;
+}
+.navbar .social-btn .twitter-btn:hover {
+background: #4ec7ef;
+}
+.navbar .social-btn .btn i {
+margin-right: 5px;
+font-size: 16px;
+position: relative;
+top: 2px;
+}
+.or-seperator {
+margin-top: 32px;
+text-align: center;
+border-top: 1px solid #e0e0e0;
+}
+.or-seperator b {
+color: #666;
+padding: 0 8px;
+/* width: 30px; */
+height: 30px;
+font-size: 13px;
+text-align: center;
+line-height: 26px;
+background: #fff;
+display: inline-block;
+border: 1px solid #e0e0e0;
+border-radius: 50%;
+position: relative;
+top: -15px;
+z-index: 1;
+}
+.navbar .action-buttons .dropdown-toggle::after {
+display: none;
+}
+.form-check-label input {
+position: relative;
+top: 1px;
+}
+.d_user-profile {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+
+#d_drop_profile-icon {
+width: 75px;
+height: 75px;
+border-radius: 50%;
+}
+
+.dropdown-toggle::after {
+display: inline-block;
+width: 0;
+height: 0;
+margin-left: 0;
+vertical-align: 0;
+content: "";
+border-top: 0 solid !important;
+border-right: 0 solid transparent;
+border-bottom: 0 !important;
+border-left: 0 solid transparent;
+}
+.dropdown-toggle::after {
+display: inline-block;
+width: 0;
+height: 0;
+margin-left: .255em;
+vertical-align: .255em;
+content: "";
+border-top: .3em solid;
+border-right: .3em solid transparent;
+border-bottom: 0;
+border-left: .3em solid transparent;
+}
+
+#d_drop, #d_not_drop {
+position: absolute;
+left: unset;
+right: 20px;
+padding: 0;
+margin: 0;
+width: 400px;
+border-radius: 0;
+opacity: 1;
+border: 0;
+box-shadow: 0 0 15px 0 rgba(0,0,0,.15);
+}
+
+.d_drop_profile-icon {
+padding: 15px;
+border-bottom: 1px solid #e7e7e7;
+}
+
+.d_main {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.d_a{
+height: 30px;
+width: 30px;
+position: absolute;
+margin-top: -12px;
+}
+
+
+
+@media (min-width: 1200px){
+.form-inline .input-group {
+width: 300px;
+margin-left: 30px;
+}
+}
+@media (max-width: 768px){
+.navbar .dropdown-menu.action-form {
+width: 100%;
+padding: 10px 15px;
+background: transparent;
+border: none;
+}
+.navbar .form-inline {
+display: block;
+}
+.navbar .input-group {
+width: 100%;
+}
+}
+</style>
+
+
+
+
+
+<script>
+var login ="";
+if (login == "") {
+}
+else
+{
+window.onload = () => document.querySelector('[data-target="#exampleModal"]').click();
+}
+</script>
+
+<script>
+var signup ="";
+if (signup == "Email is already taken") {
+window.onload = () => document.querySelector('[data-target="#this_is_signup"]').click();
+}
+else
+{
+}
+</script>
+<script>
+var signup ="";
+if (signup == "Phone number is already taken") {
+window.onload = () => document.querySelector('[data-target="#this_is_signup"]').click();
+}
+else
+{
+}
+</script>
+<script>
+function signupbutton() {
+window.onload = () => document.querySelector('[data-target="#exampleModal"]').click();
+window.onload = () => document.querySelector('[data-target="#this_is_signup"]').click();
+}
+</script>
+
+
+
+<script>
+function this_if_for_signup_click(){
+document.getElementById('this_is_signup_button_click').click();
+}
+</script>
+
+<script>
+// Prevent dropdown menu from closing when click inside the form
+$(document).on("click", ".action-buttons .dropdown-menu", function(e){
+e.stopPropagation();
+});
+</script>
+
+<body>
+<div id="thetop" class="thetop"></div>
+<div class="backtotop" style="">
+<a href="#thetop" class="scroll">
+<img src=" images/scroll_to_top.png">
+</a>
+</div>
+<!--Nav Start-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="/"><img class="logo" alt="Roosket" title="Roosket" src=" images/logo_white.png"></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="sidemenu-toggler"></span>
+<span class="sidemenu-toggler"></span>
+<span class="sidemenu-toggler"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav ml-auto" >
+
+<li class="nav-item" >
+<a class="nav-link" href="/about_us_app/"> About Us <span class="sr-only">(current)</span></a>
+</li>
+
+
+
+
+
+
+
+
+<li class="nav-item"><a class="nav-link" href="/place/"><i class="fa fa-map-markerr" aria-hidden="true"></i>&nbsp; Places</a></li>
+
+<li class="nav-item"><a class="nav-link" href="/activity/"><i class="fa fa-childd" aria-hidden="true"></i>&nbsp; Activities</a></li>
+
+<li class="nav-item"><a class="nav-link" href="/themes/"><i class="fa fa-columnss" aria-hidden="true"></i> Themes</a></li>
+
+<li class="nav-item"><a class="nav-link" href="/packages/"><i class="fa fa-th-largee" aria-hidden="true"></i>&nbsp; Packages</a></li>
+
+<li class="nav-item"><a class="nav-link" href="/gallery/"><i class="fa fa-picture-oo" aria-hidden="true"></i>&nbsp; Gallery</a></li>
+
+<li class="nav-item"><a class="nav-link" href="/inclusions"><i class="fa fa-columnss" aria-hidden="true"></i> Inclusions</a></li>
+
+
+<li class="nav-item active" id="nav_bar_base">
+<a class="nav-link dropdown-toggle d_a" href="#" id="navbarDropdown" role="button"
+data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<div class="d_user-profile" id="user_circle">
+
+<img style="height: 50px; width: 50px" src=" images/default_image.png"
+left: 342px alt="user_profile_icon" class="img-fluid" id="d_drop_profile-icon"
+onerror="this.src= images/default_image.png">
+
+</div>
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown" id="d_drop"
+style="">
+<div class="d_drop_profile-icon">
+<div class="row d_main">
+
+<div class="col-3" style="padding-right:0px;">
+<img src=" images/default_image.png" alt="user_profile_icon" class="img-fluid"
+id="d_drop_profile-icon"
+onerror="this.src= images/default_image.png">
+</div>
+<div class="col-9" style="margin-top: 20px;">
+<h5 style="color:#444444 ;">Shantam Balde</h5>
+<p style="color:#444444;">shantambalde31@gmail.com</p>
+</div>
+
+
+</div>
+</div>
+<a class="dropdown-item" href="/my_profile"><i class="fa fa-user" aria-hidden="true"></i> My Profile</a>
+<a class="dropdown-item" href="/my_bookings"><i class="fa fa-calendar" aria-hidden="true"></i> My Bookings</a>
+<a class="dropdown-item" href="/post_image"><i class="fa fa-image" aria-hidden="true"></i> Post Image</a>
+<a class="dropdown-item" href="/rating_and_review"><i class="fa fa-pencil" aria-hidden="true"></i> Write Review</a>
+<a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" style="border-bottom:0;"><i
+class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+
+</div>
+</li>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+Are you sure you want to logout ?
+</div>
+<div class="modal-footer">
+<button type="button" data-target="#close_logout_popup" id="roosket_logout_confirm_close_button" class="btn btn-danger" style="background-color: blue;" data-dismiss="modal">Close</button>
+<form method="post">
+<input type="hidden" name="csrfmiddlewaretoken" value="5Mtu1G0tL7AQGeogN6juRNlmhUte9eHz8ne3UKBmXu4bTGonfgzNZTMWUBLHLVdQ">
+<!-- <button type="submit" class="btn btn-primary">Logout</button> -->
+<a href="/logout" class="btn btn-danger" role="button">Logout</a>
+</form>
+
+</div>
+</div>
+</div>
+</div>
+
+</ul>
+
+
+
+</div>
+</div>
+</nav>
+
+
+<div id="fb-root"></div>
+<script id="allauth-facebook-settings" type="application/json">
+{"appId": "172922344576918", "version": "v2.4", "sdkUrl": "//connect.facebook.net/kr_KR/sdk.js", "initParams": {"appId": "172922344576918", "version": "v2.4"}, "loginOptions": {"auth_type": "reauthenticate", "scope": "email,public_profile,user_friends", "auth_nonce": "jZ7TZWqrSaA8ravTVXZSxs9V3J8o6bl0"}, "loginByTokenUrl": "https://roosket.com/social_auth/facebook/login/token/", "cancelUrl": "https://roosket.com/social_auth/social/login/cancelled/", "logoutUrl": "https://roosket.com/social_auth/logout/", "loginUrl": "https://roosket.com/social_auth/facebook/login/", "errorUrl": "https://roosket.com/social_auth/social/login/error/", "csrfToken": "DB4f2fEMb19upy0g9gmLvyCyxijjPcH1GcPOVjfFnoDPC00nBqC4DE38aZBMrTdi"}
+</script>
+<script type="text/javascript" src="/static/facebook/js/fbconnect.js"></script>
+
+
+<!--Banner Start-->
+
+<style>
+.image-size {
+height:290px;
+width:320px;
+border-top-left-radius: 10px ;
+border-top-right-radius: 10px;
+
+}
+.row .card
+{
+min-height: 545px;
+max-height: 645px;
+min-width: 320px;
+border-top-right-radius: 10px;
+}
+
+.view_all_button {
+min-width: 300px;
+max-width: 290px;
+
+}
+.inclusions_button_width
+{
+min-width: 300px;
+max-width: 290px;
+
+}
+.inclbg h1{
+color: #fff;
+text-align: center;
+text-transform: uppercase;
+margin-bottom: 30px;
+letter-spacing: 4px;
+font-size: 42px;
+font-weight: bold;
+}
+</style>
+
+
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+<div class="banerlong"><a href="#about">
+<button type="button" class="longbtn"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></button>
+</a></div>
+
+<div class="icon-bar">
+<a href="javascript:void(0)" class="facebook"><i class="fa fa-facebook"></i></a>
+<a href="javascript:void(0)" class="twitter"><i class="fa fa-twitter"></i></a>
+<a href="javascript:void(0)" class="youtube"><i class="fa fa-google"></i></a>
+<a href="javascript:void(0)" class="instagram"><i class="fa fa-instagram"></i></a>
+
+</div>
+
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img src=" images/slider_banner.png" class="d-block w-100" alt="...">
+<div class="carousel-caption d-none d-md-block">
+<span class="line"></span>
+<h1>AMAZING KASHMIR</h1>
+<span class="line1"></span>
+<h2> HEAVEN ON EARTH</h2>
+<a href="javascript:void(0)" data-authenticated="True" class="itinerary_btn">
+<button type="button" class="bannerbtn" ><span class="circle"><i
+class="fa fa-angle-right"></i></span> Customize Itinerary
+</button></a>
+</div>
+</div>
+<div class="carousel-item">
+<img src=" images/slider_banner.png" class="d-block w-100" alt="...">
+<div class="carousel-caption d-none d-md-block">
+<span class="line"></span>
+<h1>AMAZING KASHMIR</h1>
+<span class="line1"></span>
+<h2> HEAVEN ON EARTH</h2>
+<a href="javascript:void(0)" data-authenticated="True" class="itinerary_btn">
+<button type="button" class="bannerbtn"><span class="circle"><i
+class="fa fa-angle-right"></i></span> Customize Itinerary
+</button>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<img src=" images/slider_banner.png" class="d-block w-100" alt="...">
+<div class="carousel-caption d-none d-md-block">
+<span class="line"></span>
+<h1>AMAZING KASHMIR</h1>
+<span class="line1"></span>
+<h2> HEAVEN ON EARTH</h2>
+<a href="javascript:void(0)" data-authenticated="True" class="itinerary_btn">
+<button type="button" class="bannerbtn"><span class="circle"><i
+class="fa fa-angle-right"></i></span> Customize Itinerary
+</button>
+</a>
+</div>
+</div>
+</div>
+<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-angle-left"
+aria-hidden="true"></i></span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-angle-right"
+aria-hidden="true"></i></span>
+
+</a>
+</div>
+<!--Banner End-->
+
+<!--google play start-->
+<section class="downlodbg" id="about">
+<div class="container">
+<div class="playstore">
+<h3>Download from app store and google play</h3>
+<div class="playtop">
+<button type="button" class="playbtn fifth"><i class="fa fa-play" aria-hidden="true"></i> GOOGLE
+PLAY
+</button>
+<button type="button" class="playbtn fifth"><i class="fa fa-apple" aria-hidden="true"></i> APP STORE
+</button>
+</div>
+</div>
+</div><!--container end-->
+</section>
+<!--google play End-->
+
+
+
+
+<!--About Start-->
+<div class="container ">
+<div class="row abouttop">
+<div class="col-lg-6 col-md-12">
+<div class="about">
+<div><span class="line2"></span> <h4>About Us</h4></div>
+<h1>Travel is the</h1>
+<h2>ultimate inspiration</h2>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+the industry's standard dummy text ever since the 1500s <a class="read">Read More</a></p>
+</div>
+</div><!--col-md-6 end-->
+<div class="col-lg-6 col-md-12">
+<form action="/help" method="POST">
+<input type="hidden" name="csrfmiddlewaretoken" value="5Mtu1G0tL7AQGeogN6juRNlmhUte9eHz8ne3UKBmXu4bTGonfgzNZTMWUBLHLVdQ">
+<div class="bluebg">
+<h3 style="font-size: 42px; font-weight: bold; letter-spacing: 5px;">Contact Us</h3>
+<div class="col-lg-12">
+<div class="form-group">
+<label for="exampleInputEmail1" style="text-transform: uppercase; color: white">Email</label>
+<input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required="">
+</div>
+</div><!--row end-->
+<div class="col-lg-12">
+<div class="form-group">
+<label for="exampleInputEmail1" style="text-transform: uppercase; color: white">Subject</label>
+<input type="text" name="subject" class="form-control" id="subject" aria-describedby="emailHelp" required="">
+</div>
+</div><!--row end-->
+<div class="col-lg-12">
+<div class="form-group">
+<label for="exampleInputEmail1" style="text-transform: uppercase; color: white">Message</label>
+<textarea class="form-control" name="message" id="message" rows="3" required=""></textarea>
+</div>
+</div><!--row end-->
+
+<!-- <input type="submit" class="abtbtn" style="background: none; margin-left: 65px; border-color: white; color:white;" value="Contact Us"> -->
+<center> <button type="submit" style="width: 15px;" class="bannerbtn"><span class="circle"><i
+class="fa fa-angle-right"></i></span> Submit
+</button></center>
+</div><!--Blue Bg end-->
+</form>
+</div><!--col-md-6 end-->
+</div><!--Row End-->
+</div><!--container end-->
+<!--About End-->
+
+
+<!--top places start-->
+<section class="topplc">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12 col-lg-12 col-xl-3">
+<div class="" style="margin-left: 15px;">
+<div class="line3"></div>
+<br>
+<h1>top places</h1>
+<h3>to visit</h3>
+<a href="/place/">
+<button type="button" style="background-color: none;" class="bannerbtn view_all_button"><span class="circle"><i
+class="fa fa-angle-right"></i></span> View All
+</button>
+
+</a>
+</div>
+</div><!--col-md-5 end-->
+
+
+
+
+<div class="col-md-12 col-lg-12 col-xl-9 slidimg">
+
+<div id="myCarouselss" class="carousel slide" data-ride="carousel" data-interval="0">
+<!-- Carousel indicators -->
+<ol class="carousel-indicators blogtop">
+<li data-target="#myCarouselss" data-slide-to="0"
+class="active" ></li>
+<li data-target="#myCarouselss" data-slide-to="3"
+></li>
+</ol>
+<!-- Wrapper for carousel items -->
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="row">
+<div class="col-md-6 col-lg-6 col-xl-4">
+
+<a href="/place_details/8">
+<div class="overlay">
+<img src="  images/splendor-of-kashmir-it_NMu79Rv.jpg"
+class="card-img-top"
+alt="..." height="200px">
+<div class="tour-layer"></div>
+</div>
+<div class="slidbk">
+<h2>Srinagar</h2>
+
+<div class="placesimg">
+<img src=" images/star_grey.png">
+<img src=" images/star_grey.png">
+<img src=" images/star_grey.png">
+<img src=" images/star_grey.png">
+<img src=" images/star_grey.png">
+
+
+
+
+
+
+
+
+
+</div>
+<p>Lying on the banks of River Jhelum with deep and mesmerizing valleys cascaded in sky scraping mounta...</p>
+<a href="/place_details/8" class="pull-right"><img
+src=" images/right_arrow_white.png"></a>
+</div>
+</a>
+</div><!--col end-->
+<div class="col-md-6 col-lg-6 col-xl-4">
+
+<a href="/place_details/13">
+<div class="overlay">
+<img src="  images/thajiwas-glacier-sonmarg1.jpg"
+class="card-img-top"
+alt="..." height="200px">
+<div class="tour-layer"></div>
+</div>
+<div class="slidbk">
+<h2>Pahalgam</h2>
+
+<div class="placesimg">
+
+
+
+
+
+
+
+
+
+<img src=" images/star_colored.png">
+<img src=" images/star_colored.png">
+<img src=" images/star_colored.png">
+<img src=" images/star_colored.png">
+<img src=" images/star_colored.png">
+</div>
+<p>Surrounded by beautiful hills and lots of greenery, Pahalgam is situated at an altitude of 2,130m. T...</p>
+<a href="/place_details/13" class="pull-right"><img
+src=" images/right_arrow_white.png"></a>
+</div>
+</a>
+</div><!--col end-->
+<div class="col-md-6 col-lg-6 col-xl-4">
+
+<a href="/place_details/9">
+<div class="overlay">
+<img src="  images/best-of-kashmir-it2_SwueXAb.jpg"
+class="card-img-top"
+alt="..." height="200px">
+<div class="tour-layer"></div>
+</div>
+<div class="slidbk">
+<h2>Gulmarg</h2>
+
+<div class="placesimg">
+
+
+
+
+
+
+
+
+
+<img src="images/star_colored.png">
+<img src="images/star_colored.png">
+<img src="images/star_colored.png">
+<img src="images/star_colored.png">
+<img src="images/star_colored.png">
+</div>
+<p>Gulmarg, the meadow of flowers, is one of Asia&#x27;s premier skiing destination. It is known for its leg...</p>
+<a href="/place_details/9" class="pull-right"><img
+src=" images/right_arrow_white.png"></a>
+</div>
+</a>
+</div><!--col end-->
+</div>
+</div>
+<div class="carousel-item">
+<div class="row">
+<div class="col-md-6 col-lg-6 col-xl-4">
+
+<a href="/place_details/15">
+<div class="overlay">
+<img src="  images/warwan_1.jpg"
+class="card-img-top"
+alt="..." height="200px">
+<div class="tour-layer"></div>
+</div>
+<div class="slidbk">
+<h2>Warwan Valley</h2>
+
+<div class="placesimg">
+<img src=" images/star_grey.png">
+<img src=" images/star_grey.png">
+<img src=" images/star_grey.png">
+<img src=" images/star_grey.png">
+<img src=" images/star_grey.png">
+
+
+
+
+
+
+
+
+
+</div>
+<p>Located in the district of Kishtwar, Warwan Valley with an average elevation of more than 8500 ft ab...</p>
+<a href="/place_details/15" class="pull-right"><img
+src=" images/right_arrow_white.png"></a>
+</div>
+</a>
+</div><!--col end-->
+<div class="col-md-6 col-lg-6 col-xl-4">
+
+<a href="/place_details/16">
+<div class="overlay">
+<img src="  images/Sonmarg_1.jpg"
+class="card-img-top"
+alt="..." height="200px">
+<div class="tour-layer"></div>
+</div>
+<div class="slidbk">
+<h2>Sonamarg</h2>
+
+<div class="placesimg">
+<img src=" images/star_grey.png">
+<img src=" images/star_grey.png">
+<img src=" images/star_grey.png">
+<img src=" images/star_grey.png">
+<img src=" images/star_grey.png">
+
+
+
+
+
+
+
+
+
+</div>
+<p>Sonamarg or Sonmarg, located at an altitude of 2,740 m above sea level, literally means &#x27;Meadow of G...</p>
+<a href="/place_details/16" class="pull-right"><img
+src=" images/right_arrow_white.png"></a>
+</div>
+</a>
+</div><!--col end-->
+</div>
+</div>
+</div>
+<!-- Carousel controls -->
+<a class="carousel-control-prev" href="#myCarouselss" data-slide="prev">
+<i class="fa fa-chevron-left"></i>
+</a>
+<a class="carousel-control-next" href="#myCarouselss" data-slide="next">
+<i class="fa fa-chevron-right"></i>
+</a>
+</div>
+</div>
+
+<!--col-md-4 end-->
+
+</div><!--Row End-->
+</div><!--container end-->
+</section>
+<!--top places end-->
+
+
+<!--activities start-->
+<section class="activitbg">
+<div class="container">
+<div class="row">
+<div class="app">
+<h3>activities</h3>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy.</p>
+</div>
+</div><!--row end-->
+
+<div class="col-md-12">
+
+<div id="myCarouselsss" class="carousel slide" data-ride="carousel" data-interval="0">
+<!-- Carousel indicators -->
+<ol class="carousel-indicators blogtop">
+<li data-target="#myCarouselsss" data-slide-to="0"
+class="active" ></li>
+<li data-target="#myCarouselsss" data-slide-to="4"
+></li>
+<li data-target="#myCarouselsss" data-slide-to="8"
+></li>
+</ol>
+<!-- Wrapper for carousel items -->
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="row" >
+<div class="col-md-6 col-lg-6 col-xl-3">
+<a href="/activity_details/6">
+
+<img src="  images/gulmarg-gondola-jamm-kashmir1.jpg"
+class="card-img-top" alt="..." height="200px">
+
+<div class="tour-layer-activities"></div>
+<div class="slidbkk">
+<h2>Gulmarg Gondola</h2>
+</div>
+</a>
+</div><!--col end-->
+<div class="col-md-6 col-lg-6 col-xl-3">
+<a href="/activity_details/7">
+
+<img src="  images/attracion-slider1_C451oOl.jpg"
+class="card-img-top" alt="..." height="200px">
+
+<div class="tour-layer-activities"></div>
+<div class="slidbkk">
+<h2>Skiing</h2>
+</div>
+</a>
+</div><!--col end-->
+<div class="col-md-6 col-lg-6 col-xl-3">
+<a href="/activity_details/8">
+
+<img src="  images/bird-watching-kashmir3.jpg"
+class="card-img-top" alt="..." height="200px">
+
+<div class="tour-layer-activities"></div>
+<div class="slidbkk">
+<h2>Bird Watching</h2>
+</div>
+</a>
+</div><!--col end-->
+<div class="col-md-6 col-lg-6 col-xl-3">
+<a href="/activity_details/9">
+
+<img src="  images/mountain-biking-kashmir.jpg"
+class="card-img-top" alt="..." height="200px">
+
+<div class="tour-layer-activities"></div>
+<div class="slidbkk">
+<h2>Mountain Biking</h2>
+</div>
+</a>
+</div><!--col end-->
+</div>
+</div>
+<div class="carousel-item">
+<div class="row">
+<div class="col-md-6 col-lg-6 col-xl-3">
+<a href="/activity_details/10">
+
+<img src="  images/horse-riding-jk2.jpg"
+class="card-img-top" alt="..." height="200px">
+
+<div class="tour-layer-activities"></div>
+<div class="slidbkk">
+<h2>Horse Riding</h2>
+</div>
+</a>
+</div><!--col end-->
+<div class="col-md-6 col-lg-6 col-xl-3">
+<a href="/activity_details/11">
+
+<img src="  images/jeep-safari-jk.jpg"
+class="card-img-top" alt="..." height="200px">
+
+<div class="tour-layer-activities"></div>
+<div class="slidbkk">
+<h2>Jeep Safari</h2>
+</div>
+</a>
+</div><!--col end-->
+<div class="col-md-6 col-lg-6 col-xl-3">
+<a href="/activity_details/12">
+
+<img src="  images/fishing-jk.jpg"
+class="card-img-top" alt="..." height="200px">
+
+<div class="tour-layer-activities"></div>
+<div class="slidbkk">
+<h2>Fishing &amp; Angling</h2>
+</div>
+</a>
+</div><!--col end-->
+<div class="col-md-6 col-lg-6 col-xl-3">
+<a href="/activity_details/13">
+
+<img src="  images/golfing-jk.jpg"
+class="card-img-top" alt="..." height="200px">
+
+<div class="tour-layer-activities"></div>
+<div class="slidbkk">
+<h2>Golfing</h2>
+</div>
+</a>
+</div><!--col end-->
+</div>
+</div>
+<div class="carousel-item">
+<div class="row">
+<div class="col-md-6 col-lg-6 col-xl-3">
+<a href="/activity_details/15">
+
+<img src="  images/250_150.jpg"
+class="card-img-top" alt="..." height="200px">
+
+<div class="tour-layer-activities"></div>
+<div class="slidbkk">
+<h2>Bridge camp</h2>
+</div>
+</a>
+</div><!--col end-->
+<div class="col-md-6 col-lg-6 col-xl-3">
+<a href="/activity_details/16">
+
+<img src="  images/mountain-biking-kashmir1_mqRLc0O.jpg"
+class="card-img-top" alt="..." height="200px">
+
+<div class="tour-layer-activities"></div>
+<div class="slidbkk">
+<h2>Mountain Biking</h2>
+</div>
+</a>
+</div><!--col end-->
+<div class="col-md-6 col-lg-6 col-xl-3">
+<a href="/activity_details/17">
+
+<img
+src=" images/default_image.png"
+class="card-img-top" alt="..." height="200px">
+
+<div class="tour-layer-activities"></div>
+<div class="slidbkk">
+<h2>Carp Angling</h2>
+</div>
+</a>
+</div><!--col end-->
+<div class="col-md-6 col-lg-6 col-xl-3">
+<a href="/activity_details/4">
+
+<img src="  images/shikara-ride-jk.jpg"
+class="card-img-top" alt="..." height="200px">
+
+<div class="tour-layer-activities"></div>
+<div class="slidbkk">
+<h2>Shikara Ride</h2>
+</div>
+</a>
+</div><!--col end-->
+
+</div>
+</div>
+</div>
+
+<!-- Carousel controls -->
+<a class="carousel-control-prev" href="#myCarouselsss" data-slide="prev">
+<i class="fa fa-chevron-left"></i>
+</a>
+<a class="carousel-control-next" href="#myCarouselsss" data-slide="next">
+<i class="fa fa-chevron-right"></i>
+</a>
+</div>
+</div><!--col-md-12 end-->
+
+<!--.Carousel-->
+
+
+</div><!--container end-->
+</section>
+<!--activities end-->
+
+
+
+<!--trending topics start-->
+
+
+<section class="topplc">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12 col-lg-12 col-xl-3">
+<div class="" style="margin-left: 15px;">
+<div class="line3"></div>
+<br>
+<h1>Trending Topics</h1>
+<a href="/trending_topics_list">
+<button type="button" style="background-color: none;" class="bannerbtn view_all_button"><span class="circle"><i
+class="fa fa-angle-right"></i></span> View All
+</button>
+
+</a>
+</div>
+</div><!--col-md-5 end-->
+
+
+
+
+<div class="col-md-12 col-lg-12 col-xl-9 slidimg">
+
+<div id="myCarouselss_trending" class="carousel slide" data-ride="carousel" data-interval="0">
+<!-- Carousel indicators -->
+<ol class="carousel-indicators blogtop">
+<li data-target="#myCarouselss_trending" data-slide-to="0"
+class="active" ></li>
+<li data-target="#myCarouselss_trending" data-slide-to="3"
+></li>
+<li data-target="#myCarouselss_trending" data-slide-to="6"
+></li>
+</ol>
+<!-- Wrapper for carousel items -->
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="row">
+
+<a href="trending_topics_details/2">
+<div class="col-md-6 col-lg-6 col-xl-4" style="height: 255px;">
+
+
+
+<div class="overlay">
+<img src="/media/forums/IMG-0213.jpg"
+class="card-img-top"
+alt="" height="200px">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="slidbk" style="margin-top: 20px;">
+<span style="text-transform:uppercase; font-size: 20px; margin-block-end: 1px;">The Sound of Silence</span>
+<a href="" class="pull-right"></a>
+</div>
+
+</div><!--col end-->
+</a>
+
+<a href="trending_topics_details/3">
+<div class="col-md-6 col-lg-6 col-xl-4" style="height: 255px;">
+
+
+
+<div class="overlay">
+<img src="/media/forums/download_1.jpeg"
+class="card-img-top"
+alt="" height="200px">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="slidbk" style="margin-top: 20px;">
+<span style="text-transform:uppercase; font-size: 20px; margin-block-end: 1px;">TOP PLACES IN PAHALGAM</span>
+<a href="" class="pull-right"></a>
+</div>
+
+</div><!--col end-->
+</a>
+
+<a href="trending_topics_details/4">
+<div class="col-md-6 col-lg-6 col-xl-4" style="height: 255px;">
+
+
+
+<div class="overlay">
+<img src="/media/forums/download_4.jpeg"
+class="card-img-top"
+alt="" height="200px">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="slidbk" style="margin-top: 20px;">
+<span style="text-transform:uppercase; font-size: 20px; margin-block-end: 1px;">Explore Kashmir in 25K or Less—Flights Included!</span>
+<a href="" class="pull-right"></a>
+</div>
+
+</div><!--col end-->
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="row">
+
+<a href="trending_topics_details/5">
+<div class="col-md-6 col-lg-6 col-xl-4" style="height: 255px;">
+
+
+
+<div class="overlay">
+<img src="/media/forums/download_7.jpeg"
+class="card-img-top"
+alt="" height="200px">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="slidbk" style="margin-top: 20px;">
+<span style="text-transform:uppercase; font-size: 20px; margin-block-end: 1px;">Top 3 Places to See Snowfall in India</span>
+<a href="" class="pull-right"></a>
+</div>
+
+</div><!--col end-->
+</a>
+
+<a href="trending_topics_details/6">
+<div class="col-md-6 col-lg-6 col-xl-4" style="height: 255px;">
+
+
+
+<div class="overlay">
+<img src="/media/forums/images_1.jpeg"
+class="card-img-top"
+alt="" height="200px">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="slidbk" style="margin-top: 20px;">
+<span style="text-transform:uppercase; font-size: 20px; margin-block-end: 1px;">A Romantic Rendezvous at Nouf Khyber, Gulmarg: Celebrating Food and Togetherness!</span>
+<a href="" class="pull-right"></a>
+</div>
+
+</div><!--col end-->
+</a>
+
+<a href="trending_topics_details/7">
+<div class="col-md-6 col-lg-6 col-xl-4" style="height: 255px;">
+
+
+
+<div class="overlay">
+<img src="/media/forums/images_4.jpeg"
+class="card-img-top"
+alt="" height="200px">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="slidbk" style="margin-top: 20px;">
+<span style="text-transform:uppercase; font-size: 20px; margin-block-end: 1px;">Kashmir, a Land of Unimaginable Beauty</span>
+<a href="" class="pull-right"></a>
+</div>
+
+</div><!--col end-->
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="row">
+
+<a href="trending_topics_details/8">
+<div class="col-md-6 col-lg-6 col-xl-4" style="height: 255px;">
+
+
+
+<div class="overlay">
+<img src="/media/forums/download_13.jpeg"
+class="card-img-top"
+alt="" height="200px">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="overlay">
+
+
+<div class="tour-layer"></div>
+</div>
+
+<div class="slidbk" style="margin-top: 20px;">
+<span style="text-transform:uppercase; font-size: 20px; margin-block-end: 1px;">JAMMU AND KASHMIR HEAVEN ON EARTH!!!</span>
+<a href="" class="pull-right"></a>
+</div>
+
+</div><!--col end-->
+</a>
+</div>
+</div>
+</div>
+<!-- Carousel controls -->
+<a class="carousel-control-prev" href="#myCarouselss_trending" data-slide="prev">
+<i class="fa fa-chevron-left"></i>
+</a>
+<a class="carousel-control-next" href="#myCarouselss_trending" data-slide="next">
+<i class="fa fa-chevron-right"></i>
+</a>
+</div>
+</div>
+
+<!--col-md-4 end-->
+
+</div><!--Row End-->
+</div><!--container end-->
+</section>
+
+
+
+<!--trending topics end-->
+
+<div class="container">
+<div class="">
+<div class="app">
+<h3>themes</h3>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing
+and typesetting industry.</p>
+</div>
+</div><!--row end-->
+<div class="row blog">
+<div class="col-md-12">
+
+<div id="myCarousels" class="carousel slide" data-ride="carousel" data-interval="0">
+<!-- Carousel indicators -->
+
+<ol class="carousel-indicators blogtop">
+<li data-target="#myCarousels" data-slide-to="0"
+class="active" ></li>
+<li data-target="#myCarousels" data-slide-to="3"
+></li>
+<li data-target="#myCarousels" data-slide-to="6"
+></li>
+<li data-target="#myCarousels" data-slide-to="9"
+></li>
+</ol>
+<!-- Wrapper for carousel items -->
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="row">
+<div class="col-md-4">
+<a href="javascript:void(0)">
+<img src="https://roosket.com/media/themepackage/images/images.jpeg"
+alt="Image" style="width:100%; height: 200px;">
+<div class="tour-layer-themes"></div>
+<p class="themefnt" style="font-weight: bolder; font-size: 20px;">Family</p>
+</a>
+</div><!--col end-->
+<div class="col-md-4">
+<a href="javascript:void(0)">
+<img src="https://roosket.com/media/themepackage/images/uttrakhand-tour-packages-500x500.jpg"
+alt="Image" style="width:100%; height: 200px;">
+<div class="tour-layer-themes"></div>
+<p class="themefnt" style="font-weight: bolder; font-size: 20px;">Pilgrimage</p>
+</a>
+</div><!--col end-->
+<div class="col-md-4">
+<a href="javascript:void(0)">
+<img src="https://roosket.com/media/themepackage/images/manalitrek.jpg"
+alt="Image" style="width:100%; height: 200px;">
+<div class="tour-layer-themes"></div>
+<p class="themefnt" style="font-weight: bolder; font-size: 20px;">Trekking</p>
+</a>
+</div><!--col end-->
+</div>
+</div>
+<div class="carousel-item">
+<div class="row">
+<div class="col-md-4">
+<a href="javascript:void(0)">
+<img
+src=" images/default_image.png"
+alt="Image" style="width:100%; height: 200px;">
+<div class="tour-layer-themes"></div>
+<p class="themefnt" style="font-weight: bolder; font-size: 20px;">Honeymoon</p>
+</a>
+</div><!--col end-->
+<div class="col-md-4">
+<a href="javascript:void(0)">
+<img
+src=" images/default_image.png"
+alt="Image" style="width:100%; height: 200px;">
+<div class="tour-layer-themes"></div>
+<p class="themefnt" style="font-weight: bolder; font-size: 20px;">Wildlife</p>
+</a>
+</div><!--col end-->
+<div class="col-md-4">
+<a href="javascript:void(0)">
+<img src="https://roosket.com/media/themepackage/images/DSC_0038.JPG"
+alt="Image" style="width:100%; height: 200px;">
+<div class="tour-layer-themes"></div>
+<p class="themefnt" style="font-weight: bolder; font-size: 20px;">Solo</p>
+</a>
+</div><!--col end-->
+</div>
+</div>
+<div class="carousel-item">
+<div class="row">
+<div class="col-md-4">
+<a href="javascript:void(0)">
+<img src="https://roosket.com/media/themepackage/images/20200815_194341.jpg"
+alt="Image" style="width:100%; height: 200px;">
+<div class="tour-layer-themes"></div>
+<p class="themefnt" style="font-weight: bolder; font-size: 20px;">Angling</p>
+</a>
+</div><!--col end-->
+<div class="col-md-4">
+<a href="javascript:void(0)">
+<img src="https://roosket.com/media/themepackage/images/DSC_0006.JPG"
+alt="Image" style="width:100%; height: 200px;">
+<div class="tour-layer-themes"></div>
+<p class="themefnt" style="font-weight: bolder; font-size: 20px;">Women-only</p>
+</a>
+</div><!--col end-->
+<div class="col-md-4">
+<a href="javascript:void(0)">
+<img src="https://roosket.com/media/themepackage/images/DSC_0007.JPG"
+alt="Image" style="width:100%; height: 200px;">
+<div class="tour-layer-themes"></div>
+<p class="themefnt" style="font-weight: bolder; font-size: 20px;">Friends</p>
+</a>
+</div><!--col end-->
+</div>
+</div>
+<div class="carousel-item">
+<div class="row">
+<div class="col-md-4">
+<a href="javascript:void(0)">
+<img src="https://roosket.com/media/themepackage/images/IMG-0251.jpg"
+alt="Image" style="width:100%; height: 200px;">
+<div class="tour-layer-themes"></div>
+<p class="themefnt" style="font-weight: bolder; font-size: 20px;">Skiing</p>
+</a>
+</div><!--col end-->
+</div>
+</div>
+</div>
+<!-- Carousel controls -->
+<a class="carousel-control-prev" href="#myCarousels" data-slide="prev">
+<i class="fa fa-chevron-left"></i>
+</a>
+<a class="carousel-control-next" href="#myCarousels" data-slide="next">
+<i class="fa fa-chevron-right"></i>
+</a>
+</div>
+</div>
+</div>
+
+
+<!--row end-->
+</div><!--container end-->
+
+
+<section class="popular"><!--popular start-->
+<div class="container">
+<div class="row">
+<div class="">
+<h2>popular tour packages</h2>
+<p class="pfntp">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply
+dummy text of the printing and typesetting industry.</p>
+</div>
+</div><!--row end-->
+<!-- Popular Packages - start
+================================================== -->
+<div class="row" style="width:100%;">
+<div class="col-md-12">
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+<!-- Carousel indicators -->
+<ol class="carousel-indicators inditop">
+<li data-target="#myCarousel" data-slide-to="0"
+class="active" ></li>
+<li data-target="#myCarousel" data-slide-to="3"
+></li>
+<li data-target="#myCarousel" data-slide-to="6"
+></li>
+</ol>
+<!-- Wrapper for carousel items -->
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="row" >
+<div class="col-lg-4 col-md-6" >
+<a href="/package_details/8">
+<div class="card" style="min-height: 0px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; min-width:295px;">
+<img class="thumbnail image-size" src="  images/romantic-kashmir-tour-it.jpg" style="border-top-right-radius: 10px; height:200px; width:295px;"
+class="card-img-top packgimg" alt="..." onerror="this.src= images/default_image.png" style="border-top-right-radius: 25px;">
+<div class="card-body">
+<h5 class="card-title"
+style="height: 10px;">Kashmir Honeymoo…</h5>
+<div class="row" style="width: 375px; height:110px;">
+
+<div class="leftd" >
+<figure><center> <img src=" images/hotel.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>
+Upto 4 Star
+</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+<figure><center> <img src=" images/meal.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>Non-Veg</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+
+
+<figure><center><img src=" images/siteseeing_icon.png"></center>
+<figcaption style="font-size: 12px; color: black; margin-left: -3px;"><center><b>Sightseeing</b> </center></figcaption></figure>
+</div>
+
+</div>
+<div>
+<span style="color: gray;"> STARTING FROM </span>
+<h4>&#x20B9; 6175 /- <span
+class="grey"> &#x20B9; <del> 6500/- </del></span>
+<button type="button"
+class="btn whitebtn">5% Off
+</button>
+</h4>
+</div>
+
+<a href="#joy" data-toggle="modal" class="building-link btn bluebtn mt-2"
+data-total_cost="6175"
+data-final_cost="6175"
+data-default_amount="6175"
+data-package_pass_id="8"
+onClick="pass_package_amount();" role="button">Book
+Now</a>
+
+</div>
+</div>
+</a>
+</div><!--col end-->
+
+<div class="col-lg-4 col-md-6" >
+<a href="/package_details/7">
+<div class="card" style="min-height: 0px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; min-width:295px;">
+<img class="thumbnail image-size" src="  images/vaishno-devi-tour-it1.jpg" style="border-top-right-radius: 10px; height:200px; width:295px;"
+class="card-img-top packgimg" alt="..." onerror="this.src= images/default_image.png" style="border-top-right-radius: 25px;">
+<div class="card-body">
+<h5 class="card-title"
+style="height: 10px;">Vaishno Devi Tou…</h5>
+<div class="row" style="width: 375px; height:110px;">
+
+<div class="leftd" >
+<figure><center> <img src=" images/hotel.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>
+Upto 3 Star
+</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+<figure><center> <img src=" images/meal.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>Veg</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+
+
+<figure><center><img src=" images/siteseeing_icon.png"></center>
+<figcaption style="font-size: 12px; color: black; margin-left: -3px;"><center><b>Sightseeing</b> </center></figcaption></figure>
+</div>
+
+</div>
+<div>
+<span style="color: gray;"> STARTING FROM </span>
+<h4>&#x20B9; 18400 /- <span
+class="grey"> &#x20B9; <del> 20000/- </del></span>
+<button type="button"
+class="btn whitebtn">8% Off
+</button>
+</h4>
+</div>
+
+<a href="#joy" data-toggle="modal" class="building-link btn bluebtn mt-2"
+data-total_cost="18400"
+data-final_cost="18400"
+data-default_amount="18400"
+data-package_pass_id="7"
+onClick="pass_package_amount();" role="button">Book
+Now</a>
+
+</div>
+</div>
+</a>
+</div><!--col end-->
+
+<div class="col-lg-4 col-md-6" >
+<a href="/package_details/6">
+<div class="card" style="min-height: 0px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; min-width:295px;">
+<img class="thumbnail image-size" src="  images/best-of-kashmir-it.jpg" style="border-top-right-radius: 10px; height:200px; width:295px;"
+class="card-img-top packgimg" alt="..." onerror="this.src= images/default_image.png" style="border-top-right-radius: 25px;">
+<div class="card-body">
+<h5 class="card-title"
+style="height: 10px;">Best of Kashmir</h5>
+<div class="row" style="width: 375px; height:110px;">
+
+<div class="leftd" >
+<figure><center> <img src=" images/hotel.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>
+Upto 3 Star
+</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+<figure><center> <img src=" images/meal.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>Non-Veg</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+
+
+<figure><center><img src=" images/siteseeing_icon.png"></center>
+<figcaption style="font-size: 12px; color: black; margin-left: -3px;"><center><b>Sightseeing</b> </center></figcaption></figure>
+</div>
+
+</div>
+<div>
+<span style="color: gray;"> STARTING FROM </span>
+<h4>&#x20B9; 4500 /- <span
+class="grey"> &#x20B9; <del> 5000/- </del></span>
+<button type="button"
+class="btn whitebtn">10% Off
+</button>
+</h4>
+</div>
+
+<a href="#joy" data-toggle="modal" class="building-link btn bluebtn mt-2"
+data-total_cost="4500"
+data-final_cost="4500"
+data-default_amount="4500"
+data-package_pass_id="6"
+onClick="pass_package_amount();" role="button">Book
+Now</a>
+
+</div>
+</div>
+</a>
+</div><!--col end-->
+
+</div>
+</div>
+<div class="carousel-item">
+<div class="row">
+<div class="col-lg-4 col-md-6" >
+<a href="/package_details/18">
+<div class="card" style="min-height: 0px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; min-width:295px;">
+<img class="thumbnail image-size" src="  images/DSC_0105.JPG" style="border-top-right-radius: 10px; height:200px; width:295px;"
+class="card-img-top packgimg" alt="..." onerror="this.src= images/default_image.png" style="border-top-right-radius: 25px;">
+<div class="card-body">
+<h5 class="card-title"
+style="height: 10px;">Srinagar Pahalga…</h5>
+<div class="row" style="width: 375px; height:110px;">
+
+<div class="leftd" >
+<figure><center> <img src=" images/hotel.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>
+Upto 2 Star
+</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+<figure><center> <img src=" images/meal.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>Veg &amp; Non-Veg</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+
+
+<figure><center><img src=" images/siteseeing_icon.png"></center>
+<figcaption style="font-size: 12px; color: black; margin-left: -3px;"><center><b>Sightseeing</b> </center></figcaption></figure>
+</div>
+
+</div>
+<div>
+<span style="color: gray;"> STARTING FROM </span>
+<h4>&#x20B9; 6300 /- <span
+class="grey"> &#x20B9; <del> 7000/- </del></span>
+<button type="button"
+class="btn whitebtn">10% Off
+</button>
+</h4>
+</div>
+
+<a href="#joy" data-toggle="modal" class="building-link btn bluebtn mt-2"
+data-total_cost="6300"
+data-final_cost="6300"
+data-default_amount="6300"
+data-package_pass_id="18"
+onClick="pass_package_amount();" role="button">Book
+Now</a>
+
+</div>
+</div>
+</a>
+</div><!--col end-->
+
+<div class="col-lg-4 col-md-6" >
+<a href="/package_details/12">
+<div class="card" style="min-height: 0px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; min-width:295px;">
+<img class="thumbnail image-size" src="  images/joyfull-kashmir-it.jpg" style="border-top-right-radius: 10px; height:200px; width:295px;"
+class="card-img-top packgimg" alt="..." onerror="this.src= images/default_image.png" style="border-top-right-radius: 25px;">
+<div class="card-body">
+<h5 class="card-title"
+style="height: 10px;">Powder Skiing To…</h5>
+<div class="row" style="width: 375px; height:110px;">
+
+<div class="leftd" >
+<figure><center> <img src=" images/hotel.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>
+Upto 3 Star
+</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+<figure><center> <img src=" images/meal.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>Veg &amp; Non-Veg</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+
+
+<figure><center><img src=" images/siteseeing_icon.png"></center>
+<figcaption style="font-size: 12px; color: black; margin-left: -3px;"><center><b>Sightseeing</b> </center></figcaption></figure>
+</div>
+
+</div>
+<div>
+<span style="color: gray;"> STARTING FROM </span>
+<h4>&#x20B9; 25760 /- <span
+class="grey"> &#x20B9; <del> 28000/- </del></span>
+<button type="button"
+class="btn whitebtn">8% Off
+</button>
+</h4>
+</div>
+
+<a href="#joy" data-toggle="modal" class="building-link btn bluebtn mt-2"
+data-total_cost="25760"
+data-final_cost="25760"
+data-default_amount="25760"
+data-package_pass_id="12"
+onClick="pass_package_amount();" role="button">Book
+Now</a>
+
+</div>
+</div>
+</a>
+</div><!--col end-->
+
+<div class="col-lg-4 col-md-6" >
+<a href="/package_details/11">
+<div class="card" style="min-height: 0px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; min-width:295px;">
+<img class="thumbnail image-size" src="  images/romantic-kashmir-tour-it2-2_l6Ly7db.jpg" style="border-top-right-radius: 10px; height:200px; width:295px;"
+class="card-img-top packgimg" alt="..." onerror="this.src= images/default_image.png" style="border-top-right-radius: 25px;">
+<div class="card-body">
+<h5 class="card-title"
+style="height: 10px;">Romantic Getaway…</h5>
+<div class="row" style="width: 375px; height:110px;">
+
+<div class="leftd" >
+<figure><center> <img src=" images/hotel.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>
+Upto 4 Star
+</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+<figure><center> <img src=" images/meal.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>Non-Veg</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+
+
+<figure><center><img src=" images/siteseeing_icon.png"></center>
+<figcaption style="font-size: 12px; color: black; margin-left: -3px;"><center><b>Sightseeing</b> </center></figcaption></figure>
+</div>
+
+</div>
+<div>
+<span style="color: gray;"> STARTING FROM </span>
+<h4>&#x20B9; 9500 /- <span
+class="grey"> &#x20B9; <del> 10000/- </del></span>
+<button type="button"
+class="btn whitebtn">5% Off
+</button>
+</h4>
+</div>
+
+<a href="#joy" data-toggle="modal" class="building-link btn bluebtn mt-2"
+data-total_cost="9500"
+data-final_cost="9500"
+data-default_amount="9500"
+data-package_pass_id="11"
+onClick="pass_package_amount();" role="button">Book
+Now</a>
+
+</div>
+</div>
+</a>
+</div><!--col end-->
+
+</div>
+</div>
+<div class="carousel-item">
+<div class="row">
+<div class="col-lg-4 col-md-6" >
+<a href="/package_details/10">
+<div class="card" style="min-height: 0px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; min-width:295px;">
+<img class="thumbnail image-size" src="  images/enchanting-kashmir-package-it.jpg" style="border-top-right-radius: 10px; height:200px; width:295px;"
+class="card-img-top packgimg" alt="..." onerror="this.src= images/default_image.png" style="border-top-right-radius: 25px;">
+<div class="card-body">
+<h5 class="card-title"
+style="height: 10px;">Enchanting Kashm…</h5>
+<div class="row" style="width: 375px; height:110px;">
+
+<div class="leftd" >
+<figure><center> <img src=" images/hotel.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>
+Upto 4 Star
+</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+<figure><center> <img src=" images/meal.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>Non-Veg</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+
+
+<figure><center><img src=" images/siteseeing_icon.png"></center>
+<figcaption style="font-size: 12px; color: black; margin-left: -3px;"><center><b>Sightseeing</b> </center></figcaption></figure>
+</div>
+
+</div>
+<div>
+<span style="color: gray;"> STARTING FROM </span>
+<h4>&#x20B9; 26600 /- <span
+class="grey"> &#x20B9; <del> 28000/- </del></span>
+<button type="button"
+class="btn whitebtn">5% Off
+</button>
+</h4>
+</div>
+
+<a href="#joy" data-toggle="modal" class="building-link btn bluebtn mt-2"
+data-total_cost="26600"
+data-final_cost="26600"
+data-default_amount="26600"
+data-package_pass_id="10"
+onClick="pass_package_amount();" role="button">Book
+Now</a>
+
+</div>
+</div>
+</a>
+</div><!--col end-->
+
+<div class="col-lg-4 col-md-6" >
+<a href="/package_details/20">
+<div class="card" style="min-height: 0px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; min-width:295px;">
+<img class="thumbnail image-size" src="  images/1605858580887SampleCropImage_1.png" style="border-top-right-radius: 10px; height:200px; width:295px;"
+class="card-img-top packgimg" alt="..." onerror="this.src= images/default_image.png" style="border-top-right-radius: 25px;">
+<div class="card-body">
+<h5 class="card-title"
+style="height: 10px;">test android</h5>
+<div class="row" style="width: 375px; height:110px;">
+
+<div class="leftd" >
+<figure><center> <img src=" images/hotel.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>
+Upto 4 Star
+</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+<figure><center> <img src=" images/meal.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>Veg &amp; Non-Veg</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+
+
+<figure><center><img src=" images/siteseeing_icon.png"></center>
+<figcaption style="font-size: 12px; color: black; margin-left: -3px;"><center><b>Sightseeing</b> </center></figcaption></figure>
+</div>
+
+</div>
+<div>
+<span style="color: gray;"> STARTING FROM </span>
+<h4>&#x20B9; 18050 /- <span
+class="grey"> &#x20B9; <del> 19000/- </del></span>
+<button type="button"
+class="btn whitebtn">5% Off
+</button>
+</h4>
+</div>
+
+<a href="#joy" data-toggle="modal" class="building-link btn bluebtn mt-2"
+data-total_cost="18050"
+data-final_cost="18050"
+data-default_amount="18050"
+data-package_pass_id="20"
+onClick="pass_package_amount();" role="button">Book
+Now</a>
+
+</div>
+</div>
+</a>
+</div><!--col end-->
+
+<div class="col-lg-4 col-md-6" >
+<a href="/package_details/21">
+<div class="card" style="min-height: 0px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; min-width:295px;">
+<img class="thumbnail image-size" src="  images/image-0" style="border-top-right-radius: 10px; height:200px; width:295px;"
+class="card-img-top packgimg" alt="..." onerror="this.src= images/default_image.png" style="border-top-right-radius: 25px;">
+<div class="card-body">
+<h5 class="card-title"
+style="height: 10px;">test package</h5>
+<div class="row" style="width: 375px; height:110px;">
+
+<div class="leftd" >
+<figure><center> <img src=" images/hotel.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>
+Upto 4 Star
+</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+<figure><center> <img src=" images/meal.png"></center>
+<figcaption style="font-size: 12px; color: black;"><center><b>Veg &amp; Non-Veg</b> </center></figcaption></figure>
+</div>
+
+<div class="leftd">
+
+
+<figure><center><img src=" images/siteseeing_icon.png"></center>
+<figcaption style="font-size: 12px; color: black; margin-left: -3px;"><center><b>Sightseeing</b> </center></figcaption></figure>
+</div>
+
+</div>
+<div>
+<span style="color: gray;"> STARTING FROM </span>
+<h4>&#x20B9; 18050.0 /- <span
+class="grey"> &#x20B9; <del> 19000/- </del></span>
+<button type="button"
+class="btn whitebtn">5% Off
+</button>
+</h4>
+</div>
+
+<a href="#joy" data-toggle="modal" class="building-link btn bluebtn mt-2"
+data-total_cost="18050.0"
+data-final_cost="18050.0"
+data-default_amount="18050.0"
+data-package_pass_id="21"
+onClick="pass_package_amount();" role="button">Book
+Now</a>
+
+</div>
+</div>
+</a>
+</div><!--col end-->
+
+
+</div>
+</div>
+</div>
+<!-- Carousel controls -->
+<a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+<i class="fa fa-chevron-left"></i>
+</a>
+<a class="carousel-control-next" href="#myCarousel" data-slide="next">
+<i class="fa fa-chevron-right"></i>
+</a>
+</div>
+</div>
+</div>
+
+<!-- Popular Packages - end
+================================================== -->
+<!--row end-->
+
+</div><!--container end-->
+</section><!--popular end-->
+
+
+
+<!--Gallery Start-->
+<section class="gallery">
+<div class="container">
+
+<h1>Gallery</h1><br>
+<!-- <div class="row">-->
+<!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">-->
+<!-- <li class="nav-item">-->
+<!-- <a class="nav-link active" id="showall-tab" data-toggle="pill" href="#showall" role="tab"-->
+<!-- aria-controls="showall" aria-selected="true">All</a>-->
+<!-- </li>-->
+<!-- <li class="nav-item">-->
+<!-- <a class="nav-link" id="Cars-tab" data-toggle="pill" href="#Cars" role="tab"-->
+<!-- aria-controls="Cars" aria-selected="false">Videos</a>-->
+<!-- </li>-->
+<!-- <li class="nav-item">-->
+<!-- <a class="nav-link" id="City-tab" data-toggle="pill" href="#City" role="tab"-->
+<!-- aria-controls="City" aria-selected="false">Photos</a>-->
+<!-- </li>-->
+<!-- </ul>-->
+<!-- </div>-->
+
+<div class="row">
+<div class="tab-content" id="pills-tabContent">
+<div class="tab-pane fade show active" id="showall" role="tabpanel" aria-labelledby="showall-tab">
+<!-- <div class="Portfolio"><a href="#!"><img class="card-img" src=" images/a1.png" alt=""></a></div>
+<div class="Portfolio"><a href="#!"><img class="card-img" src=" images/a2.png" alt=""></a></div>
+<div class="Portfolio"><a href="#!"><img class="card-img" src=" images/a3.png" alt=""></a></div>
+<div class="Portfolio"><a href="#!"><img class="card-img" src=" images/a4.png" alt=""></a></div>
+<div class="Portfolio"><a href="#!"><img class="card-img" src=" images/a1.png" alt=""></a></div> -->
+<div class="Portfolio" style="border-radius: 20px;"><a href="#!">
+<img class="card-img" src="https://roosket.com/media/gallery/image-0" alt="" style="height: 300px; border-radius: 20px; border:2px solid black;"></a>
+</div>
+<div class="Portfolio" style="border-radius: 20px;"><a href="#!">
+<img class="card-img" src="https://roosket.com/media/gallery/image-1" alt="" style="height: 300px; border-radius: 20px; border:2px solid black;"></a>
+</div>
+<div class="Portfolio" style="border-radius: 20px;"><a href="#!">
+<img class="card-img" src="https://roosket.com/media/gallery/image-2" alt="" style="height: 300px; border-radius: 20px; border:2px solid black;"></a>
+</div>
+<div class="Portfolio" style="border-radius: 20px;"><a href="#!">
+<img class="card-img" src="https://roosket.com/media/gallery/image-3" alt="" style="height: 300px; border-radius: 20px; border:2px solid black;"></a>
+</div>
+<div class="Portfolio" style="border-radius: 20px;"><a href="#!">
+<img class="card-img" src="https://roosket.com/media/gallery/image-0_nXBEaVV" alt="" style="height: 300px; border-radius: 20px; border:2px solid black;"></a>
+</div>
+<div class="Portfolio" style="border-radius: 20px;"><a href="#!">
+<img class="card-img" src="https://roosket.com/media/gallery/image-1_2CNiMOw" alt="" style="height: 300px; border-radius: 20px; border:2px solid black;"></a>
+</div>
+</div>
+<!-- <div class="tab-pane fade" id="Cars" role="tabpanel" aria-labelledby="Cars-tab">-->
+<!-- <div class="Portfolio"><a href="#!"><img class="card-img"-->
+<!-- src=" images/a1.png" alt=""></a>-->
+<!-- </div>-->
+<!-- <div class="Portfolio"><a href="#!"><img class="card-img"-->
+<!-- src=" images/a2.png" alt=""></a>-->
+<!-- </div>-->
+<!-- <div class="Portfolio"><a href="#!"><img class="card-img"-->
+<!-- src=" images/a3.png" alt=""></a>-->
+<!-- </div>-->
+<!-- </div>-->
+<!-- <div class="tab-pane fade" id="City" role="tabpanel" aria-labelledby="City-tab">-->
+<!-- <div class="Portfolio"><a href="#!"><img class="card-img"-->
+<!-- src=" images/a1.png" alt=""></a>-->
+<!-- </div>-->
+<!-- <div class="Portfolio"><a href="#!"><img class="card-img"-->
+<!-- src=" images/a2.png" alt=""></a>-->
+<!-- </div>-->
+<!-- <div class="Portfolio"><a href="#!"><img class="card-img"-->
+<!-- src=" images/a3.png" alt=""></a>-->
+<!-- </div>-->
+<!-- <div class="Portfolio"><a href="#!"><img class="card-img"-->
+<!-- src=" images/a4.png" alt=""></a>-->
+<!-- </div>-->
+<!-- </div>-->
+</div>
+</div>
+
+<div class="pageli pagecenter">
+<nav aria-label="Page navigation example">
+<ul class="pagination">
+<!-- <li class="page-item" style="color: blue;"><a class="page-linkl" href="/gallery/">View-->
+<!-- all</a></li>-->
+<a href="/gallery/">
+<button type="button" class="bannerbtn view_all_button" style="background-color: none; margin-top: 0px; color: black; border-color: black;"><span class="circle" style="border: 2px solid black;"><i
+class="fa fa-angle-right" style="padding-left: 5px;"></i></span> View All
+</button>
+</a>
+</ul>
+</nav>
+</div>
+
+</div>
+</section><!--Gallery End-->
+
+
+<!--inclusions start-->
+<section class="inclbg" id="inclusions-div">
+<div class="container">
+<div class="">
+<h1>Inclusions</h1>
+<p class="pfntp">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply
+dummy text of the printing and typesetting industry.</p>
+</div>
+
+<div class="row">
+<div class="col-md-12 col-lg-6 col-xl-4">
+<div class="transport">
+<h3>transport</h3>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+<ul>
+<li><a href="javascript:void(0)"><i class="fa fa-chevron-right" aria-hidden="true"></i> Hatchback</a></li>
+<li><a href="javascript:void(0)"><i class="fa fa-chevron-right" aria-hidden="true"></i> Sedan</a></li>
+<li><a href="javascript:void(0)"><i class="fa fa-chevron-right" aria-hidden="true"></i> Buses</a></li>
+</ul>
+
+</div><!--transport end-->
+</div><!--col-md-4 end-->
+<div class="col-md-12 col-lg-6 col-xl-4">
+<div class="transport">
+<h3>Accomodation</h3>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+<ul>
+<li><a href="javascript:void(0)"><i class="fa fa-chevron-right" aria-hidden="true"></i> Hotels</a></li>
+<li><a href="javascript:void(0)"><i class="fa fa-chevron-right" aria-hidden="true"></i> Huts</a></li>
+<li><a href="javascript:void(0)"><i class="fa fa-chevron-right" aria-hidden="true"></i> Resorts</a></li>
+</ul>
+
+</div><!--transport end-->
+</div>
+<div class="col-md-12 col-lg-6 col-xl-4">
+<div class="transport">
+<h3>equipments</h3>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+<ul>
+<li><a href="javascript:void(0)"><i class="fa fa-chevron-right" aria-hidden="true"></i> Trekking Gears</a>
+</li>
+<li><a href="javascript:void(0)"><i class="fa fa-chevron-right" aria-hidden="true"></i> Skeing Gears</a></li>
+<li><a href="javascript:void(0)"><i class="fa fa-chevron-right" aria-hidden="true"></i> Finishing Gears</a>
+</li>
+</ul>
+
+</div><!--transport end-->
+</div>
+</div><!--Row End-->
+</div><!--container end-->
+</section>
+<!--inclusions end-->
+
+
+
+
+<div class="container">
+<div class="row">
+<div class="app">
+<h3>what's in the app</h3>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing
+and typesetting industry.</p>
+</div>
+</div><!--row end-->
+<div class="row apptop">
+<div class="box">
+<img src=" images/weather.png">
+<p>Weather</p>
+</div>
+<div class="box">
+<img src=" images/map.png">
+<p>Maps</p>
+</div>
+<div class="box">
+<img src=" images/language_conversions.png">
+<p>Language Conversion</p>
+</div>
+<div class="box">
+<img src=" images/currency.png">
+<p>Currency Conversion</p>
+</div>
+<div class="box">
+<img src=" images/emergency.png">
+<p>Emergency</p>
+</div>
+</div><!--row end-->
+</div><!--container end-->
+
+
+
+<!-- =====================package booking popup start=============== -->
+<!-- model for booking -->
+<div class="modal fade" id="joy" role="dialog" data-keyboard="false" data-backdrop="static">
+<div class="modal-dialog modal-lg" style="width: 1000px;">
+<div class="modal-content">
+<div class="modal-header">
+
+<h3>Booking Details</h3>
+
+<button type="button" onClick="window.location.reload();" class="close" aria-label="Close"
+data-dismiss="modal">
+<span data-dismiss="modal" aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<form method="post" action="/booking" enctype="multipart/form-data">
+<input type="hidden" name="csrfmiddlewaretoken" value="5Mtu1G0tL7AQGeogN6juRNlmhUte9eHz8ne3UKBmXu4bTGonfgzNZTMWUBLHLVdQ">
+<h5>Contact Info</h5>
+<div class="row">
+
+<div class="col-md-6 form-group">
+<label for="exampleInputEmail1">Start Date</label>
+
+<input type="date" onchange="get_start_date_onchange(event); remove_space_from_phone_number();" class="border"
+id="start_date" style="width: 345px; height: 42px; border-radius: 5px;"
+name="start_date" required/>
+</div>
+<div class="col-md-6 form-group">
+
+<label for="exampleInputEmail1">End Date</label>
+<input type="date" onchange="get_end_date_onchange(event); remove_space_from_phone_number();" class="border" id="end_date"
+style="width: 345px; height: 42px; border-radius: 5px;"
+name="end_date" required>
+
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-6 form-group">
+<label class="col-form-label" for="inputDefault">Name</label>
+<input type="text" class="form-control" name="name" pattern="[A-Za-z ]{1,32}"
+title="Plese fill valid input" id="inputDefault"
+value="Shantam Balde"
+required>
+</div>
+<div class="col-md-6 form-group">
+<label for="exampleInputContact">Contact</label>
+
+<input type="hidden" name="country_code" id="country_code" value="+91">
+<input id="phone" class="form-control change" type="text" pattern="[789][0-9]{9}"
+onkeypress="return (event.charCode == 46 || event.charCode >= 48 && event.charCode <= 57) || (event.charCode === 43 || event.charCode === 45)"
+name="phone_number" value=""
+required
+>
+
+
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-12 form-group">
+<label for="exampleInputEmail1">Email </label>
+<input type="email" value="shantambalde31@gmail.com" class="form-control"
+name="email" id="exampleInputEmail1" required>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-6 form-group">
+<label for="exampleInputCountry">Country</label>
+<select class="form-control" id="countries" onchange="select_item_for_countries_value()" required>
+<option>Select Country</option>
+</select>
+
+</div>
+
+<input type="hidden" name="country" id="show_selected_country_item" value="India">
+<div class="col-md-6 form-group">
+<label for="exampleInputState">State</label>
+<select class="form-control" onchange="select_item_for_state_value()" id="states">
+<option>Select State</option>
+
+</select>
+</div>
+
+<input type="hidden" name="state" id="show_selected_state_item" value="Jammu & Kashmir">
+
+
+</div>
+<div class="row">
+<div class="col-md-6 form-group">
+<label for="exampleInputId">Select ID Proof</label>
+<select class="form-control" id="exampleInputId" name="id_proof_type">
+<option value="aadhar-card" name="id_proof_type">Aadhar Card</option>
+<option value="Driving Licence" name="id_proof_type">Driving Licence</option>
+<option value="Pan Card" name="id_proof_type">Pan Card</option>
+</select>
+</div>
+<div class="col-md-6 form-group">
+<label for="exampleInputIdNo">Enter The Selected ID Proof Number</label>
+<input type="text" class="form-control" name="id_proof_number"
+onkeypress="return ((event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.charCode == 8 || event.charCode == 32 || (event.charCode >= 48 && event.charCode <= 57));"
+title="Should only contain number and . e.g. 1234..." id="exampleInputIdNo">
+</div>
+
+</div>
+
+
+<div class="row">
+<div class="col-md-6 form-group ">
+Upload ID Proof
+
+
+<div class="picture-container">
+<div class="picture" style="margin-bottom: -130px;">
+<img src=" images/image.png" class="picture-src" id="wizardPicturePreview-1" title="" style="height: 150px; width: 150px; border-radius: 15px;">
+<input type="file" onchange="openFile(event)" class="wizard-picture" data-count="1" name="id_proof_images" id="pic-1" required accept="image/x-png,image/gif,image/jpeg">
+<div class="d6_photo-delete" id="delete-logo-1" data-count="1">
+<i class="fa fa-times cancel-btn" data-count="1" id="delete_logo-1" aria-hidden="true"></i>
+</div>
+</div>
+<div class="picture" style="margin-bottom: -130px;">
+<img src=" images/image.png" class="picture-src" id="wizardPicturePreview-2" title="" style="height: 150px; width: 150px; border-radius: 15px;">
+<input type="file" onchange="openFile(event)" class="wizard-picture" data-count="2" name="id_proof_images" id="pic-2" accept="image/x-png,image/gif,image/jpeg">
+<div class="d6_photo-delete" id="delete-logo-2" data-count="2">
+<i class="fa fa-times cancel-btn" data-count="2" aria-hidden="true"></i>
+</div>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<h5>Travellers Info</h5>
+<div class="row">
+<!-- <div class="col-md-9"> -->
+<span>&ensp;&ensp;Adults</span>
+<!-- </div> -->
+
+<div class="col-md-3" style="margin-left: 400px;">
+<div class="input-group" style="width: 220px; ">
+<span class="input-group-btn">
+<button type="button" class="btn btn-danger btn-number" data-type="minus"
+onclick="adult_decrement();">
+<span class="fa fa-minus"></span>
+</button>
+</span>
+<input id=adult_demoInput type=number name="quant[3]"
+class="form-control input-number adult_number"
+value="1" min="1" max="100" readonly>
+<span class="input-group-btn">
+<button type="button" class="btn btn-primary btn-number" data-type="plus"
+onclick="adult_increment();">
+<span class="fa fa-plus"></span>
+</button>
+</span>
+</div>
+</div>
+
+
+</div>
+
+<br>
+
+<div class="row">
+
+<!-- <div class="col-lg-9 col-md-8"> -->
+<span>&ensp;&ensp;Children (Above 8 Years)</span>
+<!-- </div> -->
+<div class="col-lg-3 col-md-4" style="margin-left:267px;">
+<div class="input-group" style="width: 220px;">
+<span class="input-group-btn">
+<button type="button" class="btn btn-danger btn-number" data-type="minus"
+onclick="decrement();">
+<span class="fa fa-minus"></span>
+</button>
+</span>
+
+<input id=demoInput type=number name="quant[2]"
+class="form-control input-number child_number"
+value="0" min="0" max="100" readonly>
+<span class="input-group-btn">
+<button type="button" class="btn btn-primary btn-number" data-type="plus"
+onclick="increment();">
+<span class="fa fa-plus"></span>
+</button>
+</span>
+</div>
+</div>
+</div>
+
+
+<br>
+<div class="row">
+<div id="traveller_details">
+<div class="row traveller" id="traveller-1">
+<div class="col-md-6 form-group">
+<label for="exampleInputTravel" class="traveller_label">Traveller-1 </label> <span
+id="pass_number_into_travellars_labbel"></span>
+<input type="text" class="form-control name_traveller"
+value="Shantam Balde"
+name="traveller-1" id="exampleInputTravel" required>
+</div>
+<div class="col-md-3 form-group">
+<label for="exampleInpuAge">&nbsp;</label>
+<select class="form-control age_traveller" id="exampleInpuAge" , name="age-1"
+required>
+<option value="">Age</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<option value="34">34</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option>
+<option value="40">40</option>
+<option value="41">41</option>
+<option value="42">42</option>
+<option value="43">43</option>
+<option value="44">44</option>
+<option value="45">45</option>
+<option value="46">46</option>
+<option value="47">47</option>
+<option value="48">48</option>
+<option value="49">49</option>
+<option value="50">50</option>
+<option value="51">51</option>
+<option value="52">52</option>
+<option value="53">53</option>
+<option value="54">54</option>
+<option value="55">55</option>
+<option value="56">56</option>
+<option value="57">57</option>
+<option value="58">58</option>
+<option value="59">59</option>
+<option value="60">60</option>
+</select>
+</div>
+<div class="col-md-3 form-group">
+<label for="exampleInputGender">&nbsp;</label>
+<select class="form-control gender_traveller" id="exampleInputGender"
+name="gender-1" required>
+<option value="">Gender</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="other">Others</option>
+</select>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-9 form-group">
+<input type="hidden" id="offer_id_pass_to_offer" name="offer_id_pass_to_offer">
+<label for="exampleInputGender">Offer Promotion Code</label>
+<input type="text" class="form-control" name="promotion_code" minlength="4" maxlength="8"
+id="promotion_code">
+<span id="show_promo_code_activate" style="color: green;"></span>
+<p id="offer_error_msg" style="display: none"></p>
+</div>
+<div class="col-md-3 form-group">
+<span style="display: block; margin-top: 23px"></span>
+<button type="button" class="btn btn-primary" onclick='setTimeout("default_amount_for_discount()", 200); setTimeout("after_increse_adult_or_child_get_discount()",200); check_length_of_promo_code()' id="apply_offer" style="width: 100%;">Apply</button>
+</div>
+
+</div>
+
+
+
+<input type="hidden" name="discount_percent" class="discount_percent" id="pass_discount_from_ajax_to_input_box">
+
+<h5>Payment Details</h5>
+
+<div class="alert alert-light" style="background-color:#F4F6F6;">
+<div class="row">
+<div class="col-md-6">
+<span>Packages Cost</span>
+</div>
+<div class="col-md-6">
+&#x20B9;
+<span class="modal-title" id="building-total_cost"></span>
+
+<input type="hidden" class="modal-title" id="paid_amount" name="price"
+style="border:hidden;" readonly>
+
+
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<span>Number of Travellers</span>
+</div>
+
+<div class="col-md-6">
+<!-- <span id="total_number_of_person"></span> -->
+<input type="text" id="total_number_of_person" name="total_number_of_person" style="border:hidden; background: rgba(128, 123, 123, 0);
+border: none;
+outline: none;" style="color:red" value="1" readonly>
+
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+<span><b>Total Cost</b></span>
+</div>
+
+<div class="col-md-6">
+
+
+<!-- <span class="bluetext" name="total_cost_of_package" id="total_cost_of_package"></span>
+-->
+
+<input type="hidden" id="final_count_show_cost"
+name="final_cost_of_package_for_view">
+
+<span style="color: blue;"> &#x20B9; </span><span id="final_count_show_cost_on_html"
+name="final_cost_of_package_for_view"
+style="color: blue;">
+
+<input type="text" id="default_amount_on_html" name="final_cost_of_package_for_view" style="border:hidden; background: rgba(0, 0, 0, 0);
+border: none;
+outline: none; color: blue;" readonly>
+
+</span> <del> <p id="show_this_total_cost_on_page_with_strike" style="margin-top: -24px;
+margin-left: 76px;"></p> </del>
+</div>
+</div>
+</div>
+<input type="hidden" id="this_is_package_type" name="this_is_package_type">
+<input type="hidden" name="package_id" id="pass_package_id_into_text_box">
+<input type="hidden" id="dufault_package_strike_cost" name="dufault_package_strike_cost">
+<div class="modal-footer">
+<a href="/packages/" class="btn btn-danger" role="button">CANCEL</a>
+<button type="submit" name="submit_booking_form" class="btn btn-primary">PROCEED TO PAY
+</button>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</form>
+
+<!-- ================================================= -->
+<script>
+function check_length_of_promo_code(){
+var input = document.getElementById("promotion_code").value;
+var promotion_code = input.length;
+if(promotion_code > 0 && promotion_code < 4){
+alert("Code must be greater than 4 characters");
+return false;
+}
+
+if(promotion_code > 8){
+alert("Code must be less than 8 characters");
+return false
+}
+if(promotion_code == 0){
+alert("Enter Promotion Code");
+}
+
+
+
+}
+</script>
+<script>
+function select_item_for_countries_value() {
+var e = document.getElementById("countries");
+var strUser = e.options[e.selectedIndex].text;
+document.getElementById("show_selected_country_item").value = strUser;
+}
+
+function select_item_for_state_value() {
+var e = document.getElementById("states");
+var strUser = e.options[e.selectedIndex].text;
+document.getElementById("show_selected_state_item").value = strUser;
+alert(strUser);
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<script src=" crop_image/cropzee.js" defer></script>
+<style>
+.image-previewer {
+height: 200px;
+width: 200px;
+}
+</style>
+<!-- <label for="cropzee-input" class="image-previewer" data-cropzee="cropzee-input" style="width:none; height:none;"></label>
+<input id="cropzee-input" type="file" accept="image/*"> -->
+
+<script>
+$(document).ready(function () {
+$("#profile_pic").cropzee({startSize: [100, 100, '%'],});
+});
+</script>
+
+<script>
+function after_increse_adult_or_child_get_discount(){
+var discount = document.getElementsByClassName("discount_percent")[0].value;
+$("#total_number_of_person").val(+$("#demoInput").val() + +$("#adult_demoInput").val());
+var data = $("#total_number_of_person").val(+$("#demoInput").val() + +$("#adult_demoInput").val());
+var child = parseInt($("#demoInput").val());
+var adult = parseInt($("#adult_demoInput").val());
+var amount = parseInt($("#paid_amount").val());
+console.log(discount,'Discount');
+var discount = document.getElementById("pass_discount_from_ajax_to_input_box").value;
+if (discount){
+var total_cost = (child + adult) * amount;
+document.getElementById("show_this_total_cost_on_page_with_strike").innerHTML ="₹ " + total_cost;
+
+
+
+var afterDiscount = total_cost - (total_cost * discount / 100);
+document.getElementById("final_count_show_cost").value = afterDiscount;
+document.getElementById("final_count_show_cost_on_html").innerHTML = afterDiscount;
+document.getElementById("show_promo_code_activate").innerHTML = "Promo Code Activate";
+document.getElementById('apply_offer').innerText = 'Applied';
+$("#promotion_code").attr({"readonly": true});
+$("#apply_offer").attr({"disabled": true});
+$("#offer_error_msg").remove();
+}
+else
+{
+document.getElementById("final_count_show_cost").value = (child + adult) * amount;
+document.getElementById("final_count_show_cost_on_html").innerHTML = (child + adult) * amount;
+}
+}
+</script>
+
+<!-- ================================================================= -->
+
+
+<style>
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+.intl-tel-input {
+width: 100%;
+}
+</style>
+
+
+<script>
+$(document).ready(function () {
+$(".bluebtn").click(function () {
+$(".login_box").toggleClass('show');
+});
+});
+</script>
+<!-- ================================================= -->
+<form method="POST" action="/booking">
+<input type="hidden" name="csrfmiddlewaretoken" value="5Mtu1G0tL7AQGeogN6juRNlmhUte9eHz8ne3UKBmXu4bTGonfgzNZTMWUBLHLVdQ">
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+var options = {
+"key": "rzp_test_8eQJpN5z8lXIkd",
+"amount": "",
+"currency": "INR",
+// "name": "Shantam Balde",
+// "description": "Test Transaction",
+"image": " images/razorpay_log_show.png",
+"order_id": "",
+"callback_url": window.location.origin + "/success?booking_id=",
+"redirect": true,
+"notes": {
+"address": "Razorpay Corporate Office"
+},
+"theme": {
+"color": "#3B65BF"
+},
+"prefill": {
+"name": "Shantam Balde",
+"email": "shantambalde31@gmail.com",
+"contact": "None"
+},
+};
+var rzp1 = new Razorpay(options);
+document.getElementById('rzp-button1').onclick = function (e) {
+rzp1.open();
+e.preventDefault();
+}
+</script>
+
+<script>
+function default_amount_for_discount(){
+
+var default_amount = document.getElementById("default_amount_on_html").value;
+var pass_discount_from_ajax_to_input_box = document.getElementById("pass_discount_from_ajax_to_input_box").value;
+var afterDiscount = default_amount - (default_amount * pass_discount_from_ajax_to_input_box / 100);
+document.getElementById("default_amount_on_html").value = afterDiscount;
+// document.getElementById('apply_offer').disabled = 'disabled';
+// document.getElementById("input_field_id").setAttribute("readonly", true);
+
+}
+</script>
+<!-- ================================Razor Pay end======== -->
+<script>
+$(function () {
+var dtToday = new Date();
+var month = dtToday.getMonth() + 1;
+var day = dtToday.getDate();
+var year = dtToday.getFullYear();
+if (month < 10)
+month = '0' + month.toString();
+if (day < 10)
+day = '0' + day.toString();
+var maxDate = year + '-' + month + '-' + day;
+$('#start_date').attr('min', maxDate);
+});
+
+function get_start_date_onchange(event) {
+var selectElement = event.target;
+var end_date_variable = selectElement.value;
+}
+
+function get_end_date_onchange(event, s) {
+var selectElement = event.target;
+var end_date = selectElement.value;
+var start_date_value = new Date($('#start_date').val())
+year = start_date_value.getFullYear();
+month = start_date_value.getMonth() + 1;
+dt = start_date_value.getDate();
+if (dt < 10) {
+dt = '0' + dt;
+}
+if (month < 10) {
+month = '0' + month;
+}
+var start_date = year + '-' + month + '-' + dt
+if (start_date == 'NaN-NaN-NaN') {
+alert("Please Select Start Date");
+$("#end_date").val(null);
+} else {
+if (start_date > end_date) {
+alert("End Date Should Be Greater Than Start Date");
+$("#end_date").val(null);
+}
+}
+}
+</script>
+
+<script>
+function increment() {
+document.getElementById('demoInput').stepUp();
+
+$("#total_number_of_person").val(+$("#demoInput").val() + +$("#adult_demoInput").val());
+var data = $("#total_number_of_person").val(+$("#demoInput").val() + +$("#adult_demoInput").val());
+
+var child = parseInt($("#demoInput").val());
+var adult = parseInt($("#adult_demoInput").val());
+var amount = parseInt($("#paid_amount").val());
+
+var promotion_code = document.getElementById("promotion_code").value;
+
+
+var discount = document.getElementById("pass_discount_from_ajax_to_input_box").value;
+if (discount){
+var total_cost = (child + adult) * amount;
+document.getElementById("show_this_total_cost_on_page_with_strike").innerHTML ="₹ " + total_cost;
+var afterDiscount = total_cost - (total_cost * discount / 100);
+document.getElementById("final_count_show_cost").value = afterDiscount;
+document.getElementById("final_count_show_cost_on_html").innerHTML = afterDiscount;
+}
+else
+{
+document.getElementById("final_count_show_cost").value = (child + adult) * amount;
+document.getElementById("final_count_show_cost_on_html").innerHTML = (child + adult) * amount;
+}
+
+
+
+
+var $div = $('div[id^="traveller"]:last');
+var num = parseInt($div.prop("id").match(/\d+/g), 10) + 1;
+
+
+$("#traveller-1").clone().appendTo("#traveller_details").prop({
+'id': 'traveller-' + num,
+'class': 'row traveller'
+});
+$("#traveller-" + num).find('.traveller_label').text("Traveller-" + num);
+$("#traveller-" + num).find('.name_traveller').attr({"name": "traveller-" + num}).val("");
+$("#traveller-" + num).find('.age_traveller').attr({"name": "age-" + num});
+$("#traveller-" + num).find('.gender_traveller').attr({"name": "gender-" + num});
+}
+
+
+function remove_space_from_phone_number(){
+var inputVal = document.getElementById("phone").value;
+var data = inputVal.replace(/ /g,'')
+document.getElementById("phone").value = data;
+}
+
+function decrement() {
+document.getElementById('demoInput').stepDown();
+
+$("#total_number_of_person").val(+$("#demoInput").val() + +$("#adult_demoInput").val());
+var data = $("#total_number_of_person").val(+$("#demoInput").val() + +$("#adult_demoInput").val());
+
+var child = parseInt($("#demoInput").val());
+var adult = parseInt($("#adult_demoInput").val());
+var amount = parseInt($("#paid_amount").val());
+var discount = document.getElementById("pass_discount_from_ajax_to_input_box").value;
+if (discount){
+var total_cost = (child + adult) * amount;
+document.getElementById("show_this_total_cost_on_page_with_strike").innerHTML ="₹ " + total_cost;
+var afterDiscount = total_cost - (total_cost * discount / 100);
+document.getElementById("final_count_show_cost").value = afterDiscount;
+document.getElementById("final_count_show_cost_on_html").innerHTML = afterDiscount;
+}
+else
+{
+document.getElementById("final_count_show_cost").value = (child + adult) * amount;
+document.getElementById("final_count_show_cost_on_html").innerHTML = (child + adult) * amount;
+}
+
+
+
+var $div = $('div[id^="traveller"]:last');
+var num = parseInt($div.prop("id").match(/\d+/g), 10);
+if (num > 1) {
+$div.remove();
+}
+
+}
+
+function adult_increment() {
+document.getElementById('adult_demoInput').stepUp();
+
+$("#total_number_of_person").val(+$("#demoInput").val() + +$("#adult_demoInput").val());
+var data = $("#total_number_of_person").val(+$("#demoInput").val() + +$("#adult_demoInput").val());
+
+var child = parseInt($("#demoInput").val());
+var adult = parseInt($("#adult_demoInput").val());
+var amount = parseInt($("#paid_amount").val());
+
+var discount = document.getElementById("pass_discount_from_ajax_to_input_box").value;
+if (discount){
+var total_cost = (child + adult) * amount;
+document.getElementById("show_this_total_cost_on_page_with_strike").innerHTML ="₹ " + total_cost;
+var afterDiscount = total_cost - (total_cost * discount / 100);
+document.getElementById("final_count_show_cost").value = afterDiscount;
+document.getElementById("final_count_show_cost_on_html").innerHTML = afterDiscount;
+}
+else
+{
+document.getElementById("final_count_show_cost").value = (child + adult) * amount;
+document.getElementById("final_count_show_cost_on_html").innerHTML = (child + adult) * amount;
+}
+
+
+// var final_amount = (child + adult) * amount;
+// var promotion_code = document.getElementById("discount_percent").value;
+// var afterDiscount = final_amount - (final_amount * promotion_code / 100);
+
+// document.getElementById("final_count_show_cost_on_html").innerHTML = afterDiscount;
+
+
+
+
+var $div = $('div[id^="traveller"]:last');
+var num = parseInt($div.prop("id").match(/\d+/g), 10) + 1;
+
+$("#traveller-1").clone().appendTo("#traveller_details").prop({
+'id': 'traveller-' + num,
+'class': 'row traveller'
+});
+$("#traveller-" + num).find('.traveller_label').text("Traveller-" + num);
+$("#traveller-" + num).find('.name_traveller').attr({"name": "traveller-" + num}).val("");
+$("#traveller-" + num).find('.age_traveller').attr({"name": "age-" + num});
+$("#traveller-" + num).find('.gender_traveller').attr({"name": "gender-" + num});
+}
+
+function adult_decrement() {
+var child = parseInt($("#demoInput").val());
+var adult = parseInt($("#adult_demoInput").val());
+var amount = parseInt($("#paid_amount").val());
+
+if (adult !== 1) {
+var $div = $('div[id^="traveller"]:last');
+var num = parseInt($div.prop("id").match(/\d+/g), 10);
+if (num > 1) {
+$div.remove();
+}
+}
+
+document.getElementById('adult_demoInput').stepDown();
+$("#total_number_of_person").val(+$("#demoInput").val() + +$("#adult_demoInput").val());
+var data = $("#total_number_of_person").val(+$("#demoInput").val() + +$("#adult_demoInput").val());
+
+var child = parseInt($("#demoInput").val());
+var adult = parseInt($("#adult_demoInput").val());
+var amount = parseInt($("#paid_amount").val());
+// document.getElementById("final_count_show_cost").value = (child + adult) * amount;
+// document.getElementById("final_count_show_cost_on_html").innerHTML = (child + adult) * amount;
+
+var discount = document.getElementById("pass_discount_from_ajax_to_input_box").value;
+if (discount){
+var total_cost = (child + adult) * amount;
+document.getElementById("show_this_total_cost_on_page_with_strike").innerHTML ="₹ " + total_cost;
+var afterDiscount = total_cost - (total_cost * discount / 100);
+document.getElementById("final_count_show_cost").value = afterDiscount;
+document.getElementById("final_count_show_cost_on_html").innerHTML = afterDiscount;
+}
+else
+{
+document.getElementById("final_count_show_cost").value = (child + adult) * amount;
+document.getElementById("final_count_show_cost_on_html").innerHTML = (child + adult) * amount;
+}
+
+}
+
+$(function () {
+$("#demoInput, #adult_demoInput,#discount_percent").keyup(function () {
+$("#total_number_of_person").val(+$("#demoInput").val() + +$("#adult_demoInput").val());
+var data = $("#total_number_of_person").val(+$("#demoInput").val() + +$("#adult_demoInput").val());
+
+var child = parseInt($("#demoInput").val());
+var adult = parseInt($("#adult_demoInput").val());
+var amount = parseInt($("#paid_amount").val());
+document.getElementById("final_count_show_cost").value = (child + adult) * amount;
+document.getElementById("final_count_show_cost_on_html").innerHTML = (child + adult) * amount;
+
+// var promotion_code = document.getElementById("discount_percent").value;
+// if (promotion_code) {
+
+// alert("OK");
+
+// }
+// else
+// {
+// alert("Not Ok");
+// }
+
+
+
+});
+});
+
+var loadFile = function (event) {
+var output = document.getElementById('output');
+output.src = URL.createObjectURL(event.target.files[0]);
+output.onload = function () {
+URL.revokeObjectURL(output.src)
+}
+};
+
+function previewImages() {
+
+var $preview = $('#preview').empty();
+if (this.files) $.each(this.files, readAndPreview);
+
+function readAndPreview(i, file) {
+
+if (!/\.(jpe?g|png|gif)$/i.test(file.name)) {
+return alert(file.name + " is not an image");
+} // else...
+
+var reader = new FileReader();
+
+$(reader).on("load", function () {
+$preview.append($("<img>", {src: this.result, height: 150}));
+});
+
+reader.readAsDataURL(file);
+}
+
+}
+
+$('#profile_pic').on("change", previewImages);
+
+function pass_package_amount() {
+
+var cost_of_package = document.getElementById("cost_of_package").value;
+document.getElementById("cost_of_package_show").innerHTML = cost_of_package;
+
+var final_cost_of_package = document.getElementById("final_cost_of_package").value;
+var cost_of_package = document.getElementById("cost_of_package").value;
+
+document.getElementById("final_cost_of_package_show").innerHTML = final_cost_of_package;
+
+}
+
+var final_cost_of_package_display = document.getElementById("final_cost_of_package").value;
+document.getElementById("final_cost_of_package_display").innerHTML = final_cost_of_package_display;
+
+
+function get_states(country_id) {
+$.get('/api/states/?country_id=' + country_id, function (data) {
+data = data.states
+$('#states').empty();
+for (let i = 0; i < data.length; i++) {
+if (i == 0) {
+$('#states').append('<option value="' + data[i]['id'] + '" selected>' + data[i]['name'] + '</option>');
+} else {
+$('#states').append('<option value="' + data[i]['id'] + '">' + data[i]['name'] + '</option>');
+}
+}
+});
+}
+</script>
+
+<script>
+function readURL(input, count) {
+if (input.files && input.files[0]) {
+var reader = new FileReader();
+
+reader.onload = function(e) {
+$('#wizardPicturePreview-'+count).attr('src', e.target.result);
+};
+
+reader.readAsDataURL(input.files[0]);
+$("#delete-logo-"+count).show();
+}
+}
+
+$(".wizard-picture").change(function() {
+var count = $(this).data('count');
+readURL(this, count);
+
+});
+$(document).ready(function () {
+$(".d6_photo-delete").hide();
+$(".d6_photo-delete").on('click', function () {
+var count = $(this).data('count');
+$('#wizardPicturePreview-' + count).attr("src", " images/image.png");
+$("#pic-" + count).val("");
+$("#delete-logo-" + count).hide();
+})
+$.get('/api/countries/', function (data) {
+$('#countries').empty();
+data = data.countries;
+for (let i = 0; i < data.length; i++) {
+if (data[i]['name'] == "India") {
+$('#countries').append('<option value="' + data[i]['id'] + '" selected>' + data[i]['name'] + '</option>');
+} else {
+$('#countries').append('<option value="' + data[i]['id'] + '">' + data[i]['name'] + '</option>');
+}
+}
+var country_id = $('#countries').val();
+get_states(country_id);
+});
+
+$('#countries').change(function () {
+var country_id = $('#countries').val();
+get_states(country_id)
+});
+
+
+
+$('.building-link').click(function () {
+
+var final_cost = ($(this).data('final_cost'));
+document.getElementById('paid_amount').value = final_cost;
+
+$('#building-total_cost').html($(this).data('total_cost'));
+$('#dufault_package_strike_cost').val($(this).data('dufault_package_strike_cost'));
+var default_amount = ($(this).data('default_amount'));
+
+document.getElementById('default_amount_on_html').value = default_amount;
+var package_id = ($(this).data('package_pass_id'));
+document.getElementById("pass_package_id_into_text_box").value = package_id;
+
+
+var this_is_package_type = ($(this).data('this_is_package_type'));
+document.getElementById("this_is_package_type").value = this_is_package_type;
+console.log(this_is_package_type)
+if (this_is_package_type === "Custom_Package") {
+var unplanned_dates_auto = ($(this).data('unplanned_dates'));
+console.log(unplanned_dates_auto)
+if(unplanned_dates_auto !== "True"){
+document.getElementById("start_date").value = $(this).data('start_date');
+document.getElementById("end_date").value = $(this).data('end_date');
+document.getElementById("inputDefault").value = $(this).data('name');
+document.getElementsByName("email").value = $(this).data('email');
+var number_of_adults = $(this).data('number_of_adult');
+for (i=1; i<number_of_adults; i++){
+adult_increment();
+}
+var number_of_children = $(this).data('number_of_children');
+for (i=1; i<number_of_children; i++){
+increment();
+}
+}
+}
+
+});
+
+
+var telInput2 = $("#phone");
+
+var reset2 = function () {
+telInput2.removeClass("error");
+};
+
+telInput2.intlTelInput({
+
+allowExtensions: true,
+formatOnDisplay: true,
+autoFormat: true,
+autoHideDialCode: true,
+autoPlaceholder: false,
+defaultCountry: "auto",
+ipinfoToken: "yolo",
+
+nationalMode: false,
+numberType: "MOBILE",
+//onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+preferredCountries: ['sa', 'ae', 'qa', 'om', 'bh', 'kw', 'ma'],
+preventInvalidNumbers: true,
+separateDialCode: true,
+
+initialCountry: 'auto',
+geoIpLookup: function (callback) {
+callback('in');
+},
+utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"
+});
+
+telInput2.blur(function () {
+reset2();
+if ($.trim(telInput2.val())) {
+if (telInput2.intlTelInput("isValidNumber")) {
+errorMsg.css({"display": "none"});
+errorMsg.addClass("Valid");
+} else {
+alert("Please Enter valid Number.");
+return false;
+}
+}
+});
+
+$("#phone").click(function () {
+var c_code = $('.selected-dial-code').text();
+$("#country_code").val(c_code);
+});
+
+$("#apply_offer").on('click', function () {
+
+var code = $("#promotion_code").val();
+var currentdate = new Date();
+var date = currentdate.getFullYear() + "-" + (currentdate.getMonth()+1) + "-" + currentdate.getDate();
+var time = currentdate.getHours() + ":" + currentdate.getMinutes();
+
+if (code.length > 3) {
+var user_data = {'auth_token': '20d742aa565730c38cd0935b743fdd6d4e69bf5f', 'user_id': 88};
+var token = "Token " + user_data.auth_token;
+var request_data = {
+'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val(),
+'code': code,
+'date': date,
+'time': time,
+};
+$.ajax({
+url: '/api/check_promo_code/',
+type: 'post',
+data: request_data,
+headers: {
+'Authorization': token
+},
+dataType: 'json',
+success: function(data){
+var discount = data.percent;
+var offer_id = data.id;
+document.getElementById("offer_id_pass_to_offer").value = offer_id
+
+
+document.getElementById("pass_discount_from_ajax_to_input_box").value = discount;
+$("#pass_default_amount_on_html").val(discount);
+},
+error: function (response) {
+if(response.status == 400){
+var text = JSON.parse(response.responseText)['detail'];
+$("#offer_error_msg").css({"display": "block", "font-size": "14px", "color": "red"}).text(text);
+}
+if(response.status == 500){
+$("#offer_error_msg").css({"display": "block", "font-size": "14px", "color": "red"}).text("Something went wrong.");
+}
+}
+});
+} else {
+// alert("Code must be greater than 4 characters");
+}
+})
+});
+</script>
+
+
+
+
+<!-- =======================preview image and delete ============== -->
+
+<script>
+function handleClick(sender) {
+image_id = sender.id;
+if (confirm('Want to REMOVE this Image? Click on OK')) {
+$('#'+image_id).remove();
+} else {
+
+}
+}
+</script>
+
+<script>
+$(function() {
+// Multiple images preview in browser
+var imagesPreview = function(input, placeToInsertImagePreview) {
+if (input.files) {
+var filesAmount = input.files.length;
+for (i = 0; i < filesAmount; i++) {
+var reader = new FileReader();
+$('.delete_para').css('display','block');
+
+reader.onload = function(event) {
+$($.parseHTML('<img id="' + event.target.result[1000] + '" style="height:200px; width:200px; margin-right:10px; margin-bottom:10px; border-radius: 25px; margin-bottom: 25px; border: 2px solid black;" onclick="handleClick(this);">')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
+}
+reader.readAsDataURL(input.files[i]);
+}
+}
+};
+$('#profile_pic').on('change', function() {
+imagesPreview(this, 'div.gallery');
+});
+});
+</script>
+<!-- ===============package booking popup stop============================== -->
+
+<!--footer start-->
+<section class="footerbg">
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-lg-3">
+<a class="navbar-brand" href=""><img class="logo" alt="Roosket" title="Roosket" src=" images/logo_white.png"></a>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+</div><!--col-md-4 end-->
+<div class="col-md-6 col-lg-3">
+<h2>navigation</h2>
+<ul class="topfooter">
+<li><a href="/about_us_app/"><i class="fa fa-chevron-right" aria-hidden="true"></i> About Us</a></li>
+<li><a href="/place/"><i class="fa fa-chevron-right" aria-hidden="true"></i> Places</a></li>
+<li><a href="/activity/"><i class="fa fa-chevron-right" aria-hidden="true"></i> Activities</a></li>
+<li><a href="/themes/"><i class="fa fa-chevron-right" aria-hidden="true"></i> Themes</a></li>
+<li><a href="/packages/"><i class="fa fa-chevron-right" aria-hidden="true"></i> Packages</a></li>
+
+<li><a href="/gallery/"><i class="fa fa-chevron-right" aria-hidden="true"></i> Gallery</a></li>
+<li><a href="/inclusions"><i class="fa fa-chevron-right" aria-hidden="true"></i> Inclusions</a></li>
+</ul>
+</div><!--col-md-4 end-->
+<div class="col-md-6 col-lg-3">
+<h2>social media</h2>
+<div class="row smalimg">
+<div class="col-md-4">
+<img class="img-fluid" src=" images/a1.png">
+</div>
+<div class="col-md-4">
+<img class="img-fluid" src=" images/a2.png">
+</div>
+<div class="col-md-4">
+<img class="img-fluid"src=" images/a3.png">
+</div>
+<div class="col-md-4">
+<img class="img-fluid" src=" images/a4.png">
+</div>
+<div class="col-md-4">
+<img class="img-fluid" src=" images/a1.png">
+</div>
+<div class="col-md-4">
+<img class="img-fluid" src=" images/a2.png">
+</div>
+</div>
+<div class="soci">
+<i class="fa fa-facebook-f" aria-hidden="true"></i>
+<i class="fa fa-twitter" aria-hidden="true"></i>
+<i class="fa fa-youtube-play" aria-hidden="true"></i>
+<i class="fa fa-instagram" aria-hidden="true"></i>
+</div>
+</div><!--col-md-4 end-->
+<div class="col-md-6 col-lg-3">
+<h2>contact us</h2>
+<ul>
+<li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> Roosket Private Limited, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Court Road, Lal Chowk </a></li>
+<li><a href="#"><i class="" aria-hidden="true"></i>&nbsp;&nbsp;Srinagar, Jammu and </a></li>
+<li><a href="#"><i class="" aria-hidden="true"></i>&nbsp;&nbsp; Kashmir, 190001</a></li>
+<li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 9541046501, 9797334487</a></li>
+<li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> admin@roosket.com</a></li>
+<li><a href="http://www.roosket.com/"><i class="fa fa-globe" aria-hidden="true"></i> www.roosket.com</a></li>
+</ul>
+</div><!--col-md-4 end-->
+
+</div><!--row end-->
+<hr class="mt-6">
+<div class="row">
+<div class="col-md-12 col-lg-4">
+<span class="white copy">&copy;
+
+<script type="text/javascript">
+document.write(new Date().getFullYear());
+</script>
+
+All Rights Reserved Roosket</span>
+</div><!--col-md-4 end-->
+<div class="col-md-12 col-lg-8">
+<div class="footers">
+<ul>
+<li><a href="/privacy_policy" class="active" style="color:white;">privacy policy</a></li>
+<li><a href="/about_us_app/" style="color:white;">about us</a></li>
+<li><a href="/terms_and_condition" style="color:white;">Terms & Conditions</a></li>
+<!-- <li><a href="#">faq</a></li>-->
+<li><a href="/trending_topics_list" style="color:white;">blog</a></li>
+</ul>
+</div>
+</div><!--col-md-8 end-->
+
+</div><!--row end-->
+</div><!--container end-->
+</section>
+<!--footer end-->
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src=" js/jquery-3.5.1.slim.min.js"></script>
+<script src=" js/bootstrap.min.js"></script>
+
+
+<!--Popular Package JS Start-->
+<!-- fraimwork - jquery include -->
+<script src=" js/jquery-3.5.1.min.js"></script>
+<!-- carousel jquery include -->
+<script src=" js/slick.min.js"></script>
+<script src=" js/owl.carousel.min.js"></script>
+<!-- calendar jquery include -->
+<script src=" js/atc.min.js"></script>
+<!-- others jquery include -->
+<script src=" js/jquery.magnific-popup.min.js"></script>
+<script src=" js/jarallax.min.js"></script>
+<!-- custom jquery include -->
+<script src=" js/custom.js"></script>
+<script type="text/javascript" src=" js/intlTelInput.min.js"></script>
+<script>
+$(document).ready(function () {
+$(".itinerary_btn").click(function () {
+var authenticated = $(this).data('authenticated');
+if (authenticated === "True"){
+window.location.href = "/customize_itinerary";
+}
+else{
+$(".login_box").toggleClass('show');
+}
+});
+})
+</script>
+
+<!--Popular Package JS End-->
+
+</body>
+</html>

@@ -1,0 +1,680 @@
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Roosket - Dashboard</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="http://www.roosket.com/static/front/css/talwind.min.css">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="shortcut icon" href="http://www.roosket.com/static/front/images/logomini.png">
+    <link rel="stylesheet" href="http://www.roosket.com/static/front/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://www.roosket.com/static/front/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="http://www.roosket.com/static/front/css/ionicons.min.css">
+    <link rel="stylesheet" href="http://www.roosket.com/static/front/css/style.css">
+
+    <link rel="stylesheet" href="http://www.roosket.com/static/front/css/custom.css">
+    <link rel="stylesheet" href="css/chat2.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+    <!--jquery for toggle status button-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+    <!--Image Uploader-->
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link type="text/css" rel="stylesheet" https="tenor.com/view/baby-yoda-so-cute-the-mandalorian-hello-hi-gif-16772776">
+
+    <!--Image Crop-->
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://www.roosket.com/static/front/css/pixelarity.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css" rel="stylesheet"
+          media="screen">
+
+    <link href="http://www.roosket.com/static/front/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    
+    <script src="http://www.roosket.com/static/front/js/bootstrap.min.js"></script>
+    <script src="http://www.roosket.com/static/front/js/jquery.min.js"></script>
+    <style>
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://use.typekit.net/hoy3lrg.js"></script>
+
+
+
+
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+    <link rel='stylesheet prefetch'
+          href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
+
+
+
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="/admin_panel/dashboard" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><img src="http://www.roosket.com/static/front/images/logomini.png" alt="BuildWay" title="Roosket"></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><img src="http://www.roosket.com/static/front/images/roosket.png" alt="BuildWay" title="Roosket"> </span>
+            </a>
+
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+            <!-- Sidebar toggle button-->
+
+            <a href="#" class="sidebar-toggle " data-toggle="push-menu" role="button">
+                <img src="http://www.roosket.com/static/front/images/sidemenu.png">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+
+
+
+
+            <!-- Navbar Right Menu -->
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                <!-- Tasks: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                                <img src="http://www.roosket.com/media/user_profile_pic/pexels-photo-209151.jpeg" class="user-image" alt="User Image">
+
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <!-- User image -->
+                        <li class="user-header">
+
+                                <img src="http://www.roosket.com/media/user_profile_pic/pexels-photo-209151.jpeg" class="img-circle" alt="User Image">
+
+                            <p>
+
+                                    SUPER ADMIN
+
+                            </p>
+                        </li>
+
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                            <div class="pull-left">
+                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                            </div>
+                            <div class="pull-right">
+                                <a href="#" class="btn btn-default btn-flat" data-toggle="modal" data-target="#logoutModal">Sign out</a>
+                            </div>
+                        </li>
+                        </ul>
+                    </li>
+                <!-- User Account: style can be found in dropdown.less -->
+                <!-- Control Sidebar Toggle Button -->
+                </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <ul class="sidebar-menu" data-widget="tree">
+
+                    <li >
+                        <a href="/admin_panel/dashboard">
+                            <img src="http://www.roosket.com/static/front/images/dashboard_sidemenu_active.png"> <span>Dashboard</span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/admin_panel/admin_list">
+                            <img src="http://www.roosket.com/static/front/images/admin_users_sidemenu_inactive.png">
+                            <span>Admin Users</span>
+                        </a>
+                    </li>
+
+
+
+
+
+                    <li>
+                        <a href="/admin_panel/vendor_list">
+                            <img src="http://www.roosket.com/static/front/images/admin_users_sidemenu_inactive.png">
+                            <span>Vendors</span>
+                        </a>
+                    </li>
+
+
+                    <li class="treeview">
+                        <a href="#">
+                            <img src="http://www.roosket.com/static/front/images/packages_sidemenu_inactive.png"> <span>Packages</span>
+                            <span class="pull-right-container">
+                            <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="/admin_panel/package_list"><i class="fa fa-user"></i>Admin Packages</a></li>
+                            <li><a href="/admin_panel/vendor_packages/"><i class="fa fa-circle-o"></i>Vendor Packages</a></li>
+                        </ul>
+                    </li>
+
+
+
+
+
+                    <li>
+                        <a href="/admin_panel/activities_list">
+                            <img src="http://www.roosket.com/static/front/images/activities_sidemenu_inactive.png"> <span>Activities</span>
+                        </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="/admin_panel/themes_list">
+                            <i class="fa fa-desktop" aria-hidden="true"></i> <span>Themes</span>
+                        </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="/admin_panel/tourist_spots_list">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> <span>Tourist Spots</span>
+                        </a>
+                    </li>
+
+
+
+
+                    <li>
+                        <a href="/admin_panel/places_list">
+                            <img src="http://www.roosket.com/static/front/images/location_sidemenu_inactive.png">
+                            <span>Places</span>
+                        </a>
+                    </li>
+
+
+                    <li >
+                        <a href="/admin_panel/help_list">
+                            <img src="http://www.roosket.com/static/front/images/help_icon.png">
+                            <span>Help (Contact Us)</span>
+                        </a>
+                    </li>
+
+                    <li >
+                        <a href="/admin_panel/language_translator_list">
+                            <img src="http://www.roosket.com/static/front/images/LT%20(1).png"> <span>Language Translator</span>
+                        </a>
+                    </li>
+
+                    <li >
+                        <a href="/admin_panel/emergency_support_list">
+                            <img src="http://www.roosket.com/static/front/images/emergency_support.png"> <span>Emergency Support</span>
+                        </a>
+                    </li>
+
+                        <li >
+                            <a href="/admin_panel/reports?type=transactions">
+                                <img src="http://www.roosket.com/static/front/images/reports.png"> <span>Reports</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="/admin_panel/chat">
+                                <img src="http://www.roosket.com/static/front/images/images.png"> <span>Chat</span>
+                            </a>
+                        </li>
+
+
+                    <li class="treeview">
+                        <a href="#">
+                            <img src="http://www.roosket.com/static/front/images/bookings_sidmenu_inactive.png"> <span>Bookings</span>
+                            <span class="pull-right-container">
+                            <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="/admin_panel/customize_itinerary_list"><i class="fa fa-circle-o"></i> Customized Itinerary</a></li>
+                            <li><a href="/admin_panel/bookings_list"><i class="fa fa-circle-o"></i> Bookings</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <img src="http://www.roosket.com/static/front/images/settings_sidemenu_inactive.png"> <span>Settings</span>
+                            <span class="pull-right-container">
+                            <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="/admin_panel/blogs_list"><i class="fa fa-circle-o"></i> Blogs</a></li>
+                            <li><a href="/admin_panel/offers_list"><i class="fa fa-circle-o"></i> Offers & Promotions</a></li>
+                            <li><a href="/admin_panel/locations_list"><i class="fa fa-circle-o"></i> Map Locations</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview logt">
+                        <a href="#" data-toggle="modal" data-target="#logoutModal">
+                            <img src="http://www.roosket.com/static/front/images/logout_sidmenu.png"> <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <!-- Main content -->
+            <section class="content">
+            <!-- Info boxes -->
+
+
+
+
+
+
+
+
+
+
+            <div class="container">
+               
+                <div class="messaging">
+                      <div class="inbox_msg">
+                        <div class="inbox_people">
+                          <div class="headind_srch">
+                            
+                            <div class="srch_bar">
+                              <div class="pri">
+                                  <span class="input-group-addon">
+                                <input type="text" class="search-bar"  placeholder="Search Contact" >
+                                
+                                <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                                </span> </div>
+                            </div>
+                          </div>
+                          <div class="inbox_chat">
+                            <div class="chat_list active_chat">
+                              <div class="chat_people">
+                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                <div class="chat_ib">
+                                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                  <p>Test, which is a new approach .</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="chat_list">
+                              <div class="chat_people">
+                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                <div class="chat_ib">
+                                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                  <p>Test, which is a new approach .</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="chat_list">
+                              <div class="chat_people">
+                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                <div class="chat_ib">
+                                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                  <p>Test, which is a new approach .</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="chat_list">
+                              <div class="chat_people">
+                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                <div class="chat_ib">
+                                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                  <p>Test, which is a new approach .</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="chat_list">
+                              <div class="chat_people">
+                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                <div class="chat_ib">
+                                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                  <p>Test, which is a new approach .</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="chat_list">
+                              <div class="chat_people">
+                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                <div class="chat_ib">
+                                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                  <p>Test, which is a new approach .</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="chat_list">
+                              <div class="chat_people">
+                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                <div class="chat_ib">
+                                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                  <p>Test, which is a new approach .</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                  <div class="chat_ib">
+                                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                    <p>Test, which is a new approach .</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="chat_list">
+                                <div class="chat_people">
+                                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                  <div class="chat_ib">
+                                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                    <p>Test, which is a new approach .</p>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+
+                      
+
+
+
+
+
+                        <div class="mesgs">
+
+<!--                           
+                            <div class="wel">
+                          <center>
+                            <div class="images">
+                              <img src="images/user-profile.png" class="img-fluid">
+                            </div>
+                          </center>
+                          <div class="come">
+                            <h2>Welcome</h2>
+                            <h4>Kristen Stewart</h4>
+                          </div>
+                          
+                            <center>
+                              <button class="btn btn-outline-primary">Start Conversation</button>
+                            </center>
+                          
+                          <div class="para">
+                            <p class="text-muted">Search for someone to start chatting with or go to <br> Contact and see who is available.</p>
+                          </div>
+                        </div> -->
+
+                         <div class="wel-1">
+                          <center>
+                            <div class="images">
+                              <img src="images/hi.png" class="img-fluid">
+                            </div>
+                          </center>
+                          <div class="come">
+                            <h2>Say Hi...</h2>
+                          </div>
+                         </div>
+
+
+
+                          <!-- <div class="msg_history">
+                            <div class="incoming_msg">
+                              <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                              <div class="received_msg">
+                                <div class="received_withd_msg">
+                                  <p>Test which is a new approach to have all
+                                    solutions</p>
+                                  <span class="time_date"> 11:01 AM    |    June 9</span></div>
+                              </div>
+                            </div>
+                            <div class="outgoing_msg">
+                              <div class="sent_msg">
+                                <p>Test which is a new approach to have all
+                                  solutions</p>
+                                <span class="time_date"> 11:01 AM    |    June 9</span> </div>
+                            </div>
+                            <div class="incoming_msg">
+                              <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                              <div class="received_msg">
+                                <div class="received_withd_msg">
+                                  <p>Test, which is a new approach to have</p>
+                                  <span class="time_date"> 11:01 AM    |    Yesterday</span></div>
+                              </div>
+                            </div>
+                            <div class="outgoing_msg">
+                              <div class="sent_msg">
+                                <p>Apollo University, Delhi, India Test</p>
+                                <span class="time_date"> 11:01 AM    |    Today</span> </div>
+                            </div>
+                            
+                            <div class="incoming_msg">
+                              <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                              <div class="received_msg">
+                                <div class="received_withd_msg">
+                                  <p>We work directly with our designers and suppliers,
+                                    and sell direct to you, </p>
+                                  <span class="time_date"> 11:01 AM    |    Today</span></div>
+                              </div>
+                            </div>
+                            <div class="outgoing_msg">
+                              <div class="sent_msg">
+                                <p>Apollo University,</p>
+                                <span class="time_date"> 11:01 AM    |    Today</span> </div>
+                            </div>
+                            <div class="outgoing_msg">
+                              <div class="sent_msg">
+                                <p>Apollo University, Delhi, India Test</p>
+                                <span class="time_date"> 11:01 AM    |    Today</span> </div>
+                            </div>
+                            <div class="outgoing_msg">
+                              <div class="sent_msg">
+                                <p>Apollo University, Delhi, India Test</p>
+                                <span class="time_date"> 11:01 AM    |    Today</span> </div>
+                            </div>
+                          </div>
+                          <div class="type_msg">
+                            <div class="input_msg_write">
+                              <input type="textarea" class="write_msg" placeholder="Type a message" />
+                              <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                            </div>
+                          </div> -->
+
+
+
+
+
+                        </div> 
+                      </div>
+                      
+                      
+            <!-- Main row -->
+            <!-- /.row -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+            immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+           <div class="modal-content">
+              <div class="modal-header">
+                 <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">×</span>
+                 </button>
+              </div>
+              <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+              <div class="modal-footer">
+                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                 <a class="btn btn-primary" href="javascript:{document.getElementById('logout').submit()}">Logout</a>
+                 <form id="logout" method="POST" action="/logout">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="h5YQZW0bwf3qBaUihyhcm0Seklxni3v3VDXL4vp5dBz074XtUtoSvWGfROoNJj3S">
+                    <input type="hidden" />
+                 </form>
+              </div>
+           </div>
+        </div>
+     </div>
+
+    <div class="modal fade" id="statusModal" data-keyboard="false" data-backdrop="static" tabindex="-1"
+         role="dialog"
+         aria-labelledby="statusModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="statusModalLabel"><b>Change Status</b></h5>
+                </div>
+                <div class="modal-body">
+                    Do you really want to change the status ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-toggle-btn="" onClick="window.location.reload();" id="status_close_btn"
+                            class="btn btn-secondary" data-dismiss="modal">Close
+                    </button>
+
+                    <a href="" id="status_change_btn"
+                       class="btn btn-primary" role="button">Save changes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery 3 -->
+    <!-- <script src="http://www.roosket.com/static/front/js/jquery.min.js"></script> -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap 3.3.7 -->
+    <script src="http://www.roosket.com/static/front/js/bootstrap.min.js"></script>
+    <script src="http://www.roosket.com/static/front/js/custom.js"></script>
+
+    <!--Image Crop-->
+    <script type="text/javascript" src="http://www.roosket.com/static/front/js/pixelarity-face.js"></script>
+    <script type="text/javascript" src="http://www.roosket.com/static/front/js/script-face.js"></script>
+    <script type="text/javascript" src="http://www.roosket.com/static/web_app/js/intlTelInput.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".change-status-btn").on('change', function () {
+                var id = $(this).data('id');
+                var type = $(this).data('type');
+
+                console.log(id);
+                console.log(type);
+                var url = "/admin_panel/change_status/?type="+type+"&id="+id;
+                $("#status_change_btn").attr({"href": url});
+                $("#status_close_btn").attr({"data-toggle-btn": "status-"+id});
+                $("#statusModal").modal("show");
+            });
+            $("#status_close_btn").on('click', function () {
+                var toggle_btn = $(this).data('toggle-btn');
+                if($("#"+toggle_btn).is(":checked")){
+                    $("#"+toggle_btn).prop("checked", false);
+                }
+                else{
+                    $("#"+toggle_btn).prop("checked", true);
+                }
+
+            })
+        });
+    </script>
+
+</body>
+
+
+    <script>$(".messages").animate({scrollTop: $(document).height()}, "fast");
+
+    $("#profile-img").click(function () {
+        $("#status-options").toggleClass("active");
+    });
+
+    $(".expand-button").click(function () {
+        $("#profile").toggleClass("expanded");
+        $("#contacts").toggleClass("expanded");
+    });
+
+    $("#status-options ul li").click(function () {
+        $("#profile-img").removeClass();
+        $("#status-online").removeClass("active");
+        $("#status-away").removeClass("active");
+        $("#status-busy").removeClass("active");
+        $("#status-offline").removeClass("active");
+        $(this).addClass("active");
+
+        if ($("#status-online").hasClass("active")) {
+            $("#profile-img").addClass("online");
+        } else if ($("#status-away").hasClass("active")) {
+            $("#profile-img").addClass("away");
+        } else if ($("#status-busy").hasClass("active")) {
+            $("#profile-img").addClass("busy");
+        } else if ($("#status-offline").hasClass("active")) {
+            $("#profile-img").addClass("offline");
+        } else {
+            $("#profile-img").removeClass();
+        }
+        ;
+
+        $("#status-options").removeClass("active");
+    });
+
+    function newMessage() {
+        message = $(".message-input textarea").val();
+        if ($.trim(message) == '') {
+            return false;
+        }
+        $('<li class="sent"><p>' + message + '</p></li>').appendTo($('.messages ul'));
+        $('.message-input textarea').val(null);
+        $('.contact.active .preview').html('<span>You: </span>' + message);
+        $(".messages").animate({scrollTop: $(document).height()}, "fast");
+    };
+
+    $('.submit').click(function () {
+        newMessage();
+    });
+
+    $(window).on('keydown', function (e) {
+        if (e.which == 13) {
+            newMessage();
+            return false;
+        }
+    });
+    //# sourceURL=pen.js
+    </script>
+
+</html>
